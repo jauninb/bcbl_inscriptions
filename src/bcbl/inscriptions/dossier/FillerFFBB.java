@@ -3,6 +3,8 @@ package bcbl.inscriptions.dossier;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
@@ -12,8 +14,13 @@ import org.apache.pdfbox.pdmodel.interactive.form.PDTextField;
 
 public class FillerFFBB {
 
+	private static Calendar now = Calendar.getInstance();
+	static {
+		now.setTime(new Date());
+	}
+
 	private String target;
-	
+
 	private static SimpleDateFormat DD_MM_YYYY = new SimpleDateFormat("dd/MM/YYYY");
 
 	public FillerFFBB(String targetFolder) {
@@ -57,44 +64,54 @@ public class FillerFFBB {
 
 			PDTextField prenom = (PDTextField) acroForm.getField("Prénom");
 			prenom.setValue(fbi.prenom);
-			
+
 			if (bcbl.sexe.equals("M")) {
 				PDCheckBox masculin = (PDCheckBox) acroForm.getField("Masculin");
-				masculin.check();				
+				masculin.check();
 			} else {
 				PDCheckBox feminin = (PDCheckBox) acroForm.getField("Féminin");
-				feminin.check();				
+				feminin.check();
 			}
-			
+
 			PDTextField naissance = (PDTextField) acroForm.getField("Date de naissance");
 			naissance.setValue(DD_MM_YYYY.format(fbi.naissance));
-			
+
+			Calendar cNaissance = Calendar.getInstance();
+			cNaissance.setTime(fbi.naissance);
+			if ((now.get(Calendar.YEAR) - cNaissance.get(Calendar.YEAR)) > 20) {
+				PDTextField taille = (PDTextField) acroForm.getField("Taille");
+				taille.setValue(String.valueOf((int)fbi.taille));
+			}
+
 			if (fbi.licence.startsWith("BC") || fbi.licence.startsWith("VT")) {
 				PDTextField nationalite = (PDTextField) acroForm.getField("NATIONALITEmajeurs uniquement");
 				nationalite.setValue("Française");
 			}
-			
+
 			PDTextField adresse = (PDTextField) acroForm.getField("ADRESSE");
 			adresse.setValue(fbi.adresse);
 
 			PDTextField cp = (PDTextField) acroForm.getField("CODE POSTAL");
 			cp.setValue(fbi.code_postal);
-			
+
 			PDTextField ville = (PDTextField) acroForm.getField("VILLE");
 			ville.setValue(fbi.ville);
 
 			PDTextField telephone = (PDTextField) acroForm.getField("TELEPHONE DOMICILE");
 			telephone.setValue(fbi.telephone);
-			
+
 			PDTextField portable = (PDTextField) acroForm.getField("PORTABLE");
 			portable.setValue(fbi.portable1);
-			
+
 			PDTextField email = (PDTextField) acroForm.getField("EMAIL");
 			email.setValue(fbi.email1);
-			
-			//PDTextField email = (PDTextField) acroForm.getField("EMAIL");
-			//email.setValue(fbi.email1);
-			
+
+			if (true || (now.get(Calendar.YEAR) - cNaissance.get(Calendar.YEAR)) <= 18) {
+				PDTextField dopageJoueur = (PDTextField) acroForm.getField("Mineur Dopage");
+				dopageJoueur.setValue(bcbl.prenom.substring(0, 1).toUpperCase() + bcbl.prenom.substring(1).toLowerCase()
+						+ " " + bcbl.nom.substring(0, 1).toUpperCase() + bcbl.nom.substring(1).toLowerCase());
+			}
+
 		}
 
 		// Save and close the filled out form.
