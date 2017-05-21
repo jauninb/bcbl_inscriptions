@@ -1,6 +1,7 @@
 package bcbl.inscriptions.dossier;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -49,6 +50,7 @@ public class Main {
 			fbiLicencies.put(l.licence, l);
 		}
 
+		/*
 		// Verification des données
 		for (Licencie bcbl : bcblLicencieMiner.findLicencies()) {
 			Licencie fbi = fbiLicencies.get(bcbl.licence);
@@ -89,9 +91,20 @@ public class Main {
 			List<String> commonPhones = new ArrayList<String>(fbiPhones);
 			commonPhones.retainAll(bcblPhones);
 			if (commonPhones.size() == 0) {
-				System.err.println("FBI téléphones (" + fbiPhones + ") n'a aucun numéros concordants pour " + bcbl.licence + " - "
-						+ bcbl.nom + " " + bcbl.prenom + ": " + bcblPhones);
+				System.err.println("FBI téléphones (" + fbiPhones + ") n'a aucun numéros concordants pour "
+						+ bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": " + bcblPhones);
 			}
+		}
+		*/
+		
+		// Sample
+		Licencie bcbl = bcblLicencieMiner.findLicencies().get(123);
+		Licencie fbi = fbiLicencies.get(bcbl.licence);
+		
+		try {
+			new FillerFFBB("./test").generate(fbi, bcbl);
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
 		}
 	}
 }

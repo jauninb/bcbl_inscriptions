@@ -1,0 +1,106 @@
+package bcbl.inscriptions.dossier;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
+import org.apache.pdfbox.pdmodel.interactive.form.PDField;
+import org.apache.pdfbox.pdmodel.interactive.form.PDTextField;
+
+public class FillerFFBB {
+
+	private String target;
+	
+	private static SimpleDateFormat DD_MM_YYYY = new SimpleDateFormat("dd/MM/YYYY");
+
+	public FillerFFBB(String targetFolder) {
+		super();
+		this.target = targetFolder;
+	}
+
+	public void generate(Licencie fbi, Licencie bcbl) throws IOException {
+		String formTemplate = "./data/nouveau_formulaire_de_licence2.pdf";
+
+		// load the document
+		PDDocument pdfDocument = PDDocument.load(new File(formTemplate));
+
+		// get the document catalog
+		PDAcroForm acroForm = pdfDocument.getDocumentCatalog().getAcroForm();
+
+		// as there might not be an AcroForm entry a null check is necessary
+		if (acroForm != null) {
+			for (PDField field : acroForm.getFields()) {
+				System.out.println(field.getFullyQualifiedName() + " - " + field.getClass().getTypeName());
+			}
+
+			//
+			PDCheckBox renouvellement = (PDCheckBox) acroForm.getField("Renouvellement");
+			renouvellement.check();
+
+			PDTextField cd = (PDTextField) acroForm.getField("CD");
+			cd.setValue("44");
+
+			PDTextField affiliation = (PDTextField) acroForm.getField("Affiliation");
+			affiliation.setValue("0444001");
+
+			PDTextField club = (PDTextField) acroForm.getField("Club");
+			club.setValue("Basket Club Basse Loire");
+
+			PDTextField licence = (PDTextField) acroForm.getField("N de licence si déjà licencié");
+			licence.setValue(fbi.licence);
+
+			PDTextField nom = (PDTextField) acroForm.getField("NOM");
+			nom.setValue(fbi.nom);
+
+			PDTextField prenom = (PDTextField) acroForm.getField("Prénom");
+			prenom.setValue(fbi.prenom);
+			
+			if (bcbl.sexe.equals("M")) {
+				PDCheckBox masculin = (PDCheckBox) acroForm.getField("Masculin");
+				masculin.check();				
+			} else {
+				PDCheckBox feminin = (PDCheckBox) acroForm.getField("Féminin");
+				feminin.check();				
+			}
+			
+			PDTextField naissance = (PDTextField) acroForm.getField("Date de naissance");
+			naissance.setValue(DD_MM_YYYY.format(fbi.naissance));
+			
+			if (fbi.licence.startsWith("BC") || fbi.licence.startsWith("VT")) {
+				PDTextField nationalite = (PDTextField) acroForm.getField("NATIONALITEmajeurs uniquement");
+				nationalite.setValue("Française");
+			}
+			
+			PDTextField adresse = (PDTextField) acroForm.getField("ADRESSE");
+			adresse.setValue(fbi.adresse);
+
+			PDTextField cp = (PDTextField) acroForm.getField("CODE POSTAL");
+			cp.setValue(fbi.code_postal);
+			
+			PDTextField ville = (PDTextField) acroForm.getField("VILLE");
+			ville.setValue(fbi.ville);
+
+			PDTextField telephone = (PDTextField) acroForm.getField("TELEPHONE DOMICILE");
+			telephone.setValue(fbi.telephone);
+			
+			PDTextField portable = (PDTextField) acroForm.getField("PORTABLE");
+			portable.setValue(fbi.portable1);
+			
+			PDTextField email = (PDTextField) acroForm.getField("EMAIL");
+			email.setValue(fbi.email1);
+			
+			//PDTextField email = (PDTextField) acroForm.getField("EMAIL");
+			//email.setValue(fbi.email1);
+			
+		}
+
+		// Save and close the filled out form.
+		pdfDocument.save(target + File.separator + bcbl.nom + "_" + bcbl.prenom + ".pdf");
+		pdfDocument.close();
+
+	}
+
+}

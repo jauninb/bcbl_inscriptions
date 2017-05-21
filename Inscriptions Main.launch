@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/inscriptions/src/bcbl/inscriptions/dossier/Main.java"/>
+<listEntry value="/bcbl_inscriptions/src/bcbl/inscriptions/dossier/Main.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bcbl.inscriptions.dossier.Main"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-licenciesBCBL &quot;C:\usr\Personnel\basket\equipes\saison 2017_2018\2017-2018 Listing Licencies.xls&quot; -licenciesFBI &quot;C:\usr\Personnel\basket\equipes\saison 2016_2017\M01_qualifies_complet_L_E_P_V.xls&quot;"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="inscriptions"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="bcbl_inscriptions"/>
 </launchConfiguration>
