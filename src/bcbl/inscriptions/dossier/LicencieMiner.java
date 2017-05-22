@@ -13,6 +13,7 @@ public class LicencieMiner {
 	private static int BCBL_STARTING_ROW = 1;
 	private static int BCBL_NOM_CELL_INDEX = indexOfColumn('F');
 	private static int BCBL_PRENOM_CELL_INDEX = indexOfColumn('G');
+	private static int BCBL_CATEGORIE_CELL_INDEX = indexOfColumn('I');
 	private static int BCBL_LICENCE_CELL_INDEX = indexOfColumn('N');
 	private static int BCBL_TELEPHONE_CELL_INDEX = indexOfColumn('O');
 	private static int BCBL_PORTABLE1_CELL_INDEX = indexOfColumn('P');
@@ -86,6 +87,7 @@ public class LicencieMiner {
 					Licencie licencie = new Licencie();
 					licencie.nom = cellNom.getStringCellValue();
 					licencie.prenom = row.getCell(BCBL_PRENOM_CELL_INDEX).getStringCellValue();
+					licencie.categorie = row.getCell(BCBL_CATEGORIE_CELL_INDEX).getStringCellValue();
 					licencie.email1 = row.getCell(BCBL_EMAIL1_CELL_INDEX).getStringCellValue();
 					licencie.email2 = row.getCell(BCBL_EMAIL2_CELL_INDEX).getStringCellValue();
 					licencie.naissance = row.getCell(BCBL_NAISSANCE_CELL_INDEX).getDateCellValue();

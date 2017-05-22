@@ -45,18 +45,18 @@ public class EmailEmitter {
 		session = Session.getInstance(properties, auth);
 	}
 
-	public void sendEmail(Licencie bcbl, Licencie fbi, File[] attachments) throws AddressException, MessagingException {
+	public void sendEmail(Licencie fbi, Licencie bcbl, File[] attachments) throws AddressException, MessagingException {
         Message msg = new MimeMessage(session);
         
         msg.setFrom(new InternetAddress(this.userName));
         InternetAddress[] toAddresses = { new InternetAddress(/*bcbl.email1*/"jauninb@yahoo.fr") };
         msg.setRecipients(Message.RecipientType.TO, toAddresses);
-        msg.setSubject("subject");
+        msg.setSubject("Dossier Renouvellement BCBL:" + bcbl.nom + " " + bcbl.prenom);
         msg.setSentDate(new Date());
  
         // creates message part
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent("message", "text/html");
+        messageBodyPart.setContent("Renouvellement du dossier de licence", "text/html");
  
         // creates multi-part
         Multipart multipart = new MimeMultipart();

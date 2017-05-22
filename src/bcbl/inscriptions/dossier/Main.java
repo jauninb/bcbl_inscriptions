@@ -1,10 +1,12 @@
 package bcbl.inscriptions.dossier;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
@@ -17,6 +19,8 @@ public class Main {
 		int begin = -1;
 		int end = -1;
 		boolean noCheck = false;
+		int delay = 0;
+		String output = ".";
 
 		for (int i = 0; i < args.length; i++) {
 			if ("-licenciesFBI".equals(args[i])) {
@@ -31,6 +35,10 @@ public class Main {
 				end = Integer.parseInt(args[++i]);
 			} else if ("-noCheck".equals(args[i])) {
 				noCheck = true;
+			} else if ("-delay".equals(args[i])) {
+				delay = Integer.parseInt(args[++i]);
+			} else if ("-output".equals(args[i])) {
+				output = args[++i];
 			}
 		}
 
@@ -69,14 +77,14 @@ public class Main {
 				return o1.licence.compareTo(o2.licence);
 			}
 		});
-		
+
 		// Verification des données
 		if (!noCheck) {
 			for (Licencie bcbl : listOfLicenciesBCBL) {
 				Licencie fbi = fbiLicencies.get(bcbl.licence);
 				if (fbi == null) {
-					System.err
-							.println("Pas de licencié trouvé pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+					System.err.println(
+							"Pas de licencié trouvé pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 					continue;
 				}
 				// fbi n'a qu'un seul email - contrairement à bcbl
@@ -86,7 +94,7 @@ public class Main {
 							+ bcbl.nom + " " + bcbl.prenom + ": " + bcbl.email1
 							+ ((bcbl.email2 != null && bcbl.email2.trim().length() > 0) ? " ou " + bcbl.email2 : ""));
 				}
-	
+
 				// vérification des n° de téléphone
 				List<String> fbiPhones = new ArrayList<String>();
 				String[] phones = { fbi.telephone, fbi.portable1, fbi.portable2 };
@@ -116,13 +124,13 @@ public class Main {
 				}
 			}
 		}
-		
+
 		List<Licencie> licenciesBCBLToProcess;
 		if (licence != null) {
 			// Traitement d'un licencié spécifiquement
 			licenciesBCBLToProcess = new ArrayList<Licencie>(1);
 			Licencie bcbl = null;
-			for (Licencie l: listOfLicenciesBCBL) {
+			for (Licencie l : listOfLicenciesBCBL) {
 				if (licence.equals(l.licence)) {
 					bcbl = l;
 					break;
@@ -143,30 +151,61 @@ public class Main {
 					licenciesBCBLToProcess = listOfLicenciesBCBL.subList(begin, listOfLicenciesBCBL.size());
 				}
 			} else if (end >= 0) {
-				licenciesBCBLToProcess = listOfLicenciesBCBL.subList(0, end);				
+				licenciesBCBLToProcess = listOfLicenciesBCBL.subList(0, end);
 			} else {
 				licenciesBCBLToProcess = listOfLicenciesBCBL;
 			}
 		}
-		
-		for (Licencie bcbl: licenciesBCBLToProcess) {
+
+		Properties configuration = new Properties();
+		try {
+			configuration.load(new FileInputStream("./configuration/configuration.properties"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		FillerFFBB fillerFFBB = new FillerFFBB(output);
+		FillerBCBL fillerBCBL = new FillerBCBL(output, configuration.getProperty("bcbl.dossier"));
+		int i = 1;
+		for (Licencie bcbl : licenciesBCBLToProcess) {
 			try {
-				Licencie fbi = fbiLicencies.get(bcbl.licence);				
-				//new FillerFFBB("./test").generate(fbi, bcbl);
-				new FillerBCBL("./test").generate(fbi, bcbl);
+				Licencie fbi = fbiLicencies.get(bcbl.licence);
+
+				System.out.println(
+						(i++) + " - Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				File[] attachments = new File[2];
+				System.out
+						.println("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				attachments[0] = fillerFFBB.generate(fbi, bcbl);
+				System.out
+						.println("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				attachments[1] = fillerBCBL.generate(fbi, bcbl);
+
+				System.out.println("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
+						Integer.parseInt(configuration.getProperty("mail.smtp.port")),
+						configuration.getProperty("mail.user"), configuration.getProperty("mail.password"));
+				// emailEmitter.sendEmail(fbi, bcbl, attachments);
+
 			} catch (Exception ioe) {
 				ioe.printStackTrace();
 			}
-			
+
 			/*
-			try {
-				EmailEmitter emailEmitter = new EmailEmitter("smtp.mail.yahoo.com", 587, "", "");
-				emailEmitter.sendEmail(null, null, null);
-			} catch (Exception e) {
-				e.printStackTrace();
+			 * try { EmailEmitter emailEmitter = new
+			 * EmailEmitter("smtp.mail.yahoo.com", 587, "", "");
+			 * emailEmitter.sendEmail(null, null, null); } catch (Exception e) {
+			 * e.printStackTrace(); }
+			 */
+
+			if (delay > 0) {
+				try {
+					Thread.sleep(delay * 1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
-			*/
-			
+
 		}
 
 	}

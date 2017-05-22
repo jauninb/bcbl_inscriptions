@@ -17,6 +17,7 @@ public class Licencie {
 	public String adresse;
 	public String code_postal;
 	public String ville;
+	public String categorie;
 	
 	@Override
 	public String toString() {
@@ -25,6 +26,5 @@ public class Licencie {
 				+ portable1 + ", portable2=" + portable2 + ", taille=" + taille + ", sexe=" + sexe + ", adresse="
 				+ adresse + ", code_postal=" + code_postal + ", ville=" + ville + "]";
 	}
-	
 	
 }

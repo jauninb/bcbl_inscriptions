@@ -39,16 +39,16 @@ public class FillerFFBB {
 
 		// as there might not be an AcroForm entry a null check is necessary
 		if (acroForm != null) {
-			for (PDField field : acroForm.getFields()) {
-				System.out.println(field.getFullyQualifiedName() + " - " + field.getClass().getTypeName());
-			}
+			//for (PDField field : acroForm.getFields()) {
+			//	System.out.println(field.getFullyQualifiedName() + " - " + field.getClass().getTypeName());
+			//}
 
 			//
 			PDCheckBox renouvellement = (PDCheckBox) acroForm.getField("Renouvellement");
 			renouvellement.check();
 
 			PDTextField cd = (PDTextField) acroForm.getField("CD");
-			cd.setValue("44");
+			cd.setValue("CD44");
 
 			PDTextField affiliation = (PDTextField) acroForm.getField("Affiliation");
 			affiliation.setValue("0444001");
@@ -106,7 +106,7 @@ public class FillerFFBB {
 			PDTextField email = (PDTextField) acroForm.getField("EMAIL");
 			email.setValue(fbi.email1);
 
-			if (true || (now.get(Calendar.YEAR) - cNaissance.get(Calendar.YEAR)) <= 18) {
+			if ((now.get(Calendar.YEAR) - cNaissance.get(Calendar.YEAR)) <= 18) {
 				PDTextField dopageJoueur = (PDTextField) acroForm.getField("Mineur Dopage");
 				dopageJoueur.setValue(bcbl.prenom.substring(0, 1).toUpperCase() + bcbl.prenom.substring(1).toLowerCase()
 						+ " " + bcbl.nom.substring(0, 1).toUpperCase() + bcbl.nom.substring(1).toLowerCase());
@@ -115,7 +115,7 @@ public class FillerFFBB {
 		}
 
 		// Save and close the filled out form.
-		File targetFile = new File(target + File.separator + bcbl.nom + "_" + bcbl.prenom + ".pdf");
+		File targetFile = new File(target + File.separator + "FFBB " + bcbl.nom + "_" + bcbl.prenom + ".pdf");
 		pdfDocument.save(targetFile);
 		pdfDocument.close();
 		return targetFile;
