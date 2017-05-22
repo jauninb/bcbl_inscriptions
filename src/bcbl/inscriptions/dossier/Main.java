@@ -18,6 +18,7 @@ public class Main {
 	private static DateFormat dateLogFormat = SimpleDateFormat.getDateTimeInstance(DateFormat.MEDIUM,
 			DateFormat.MEDIUM);
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		String licenciesBCBL = null;
 		String licenciesFBI = null;
