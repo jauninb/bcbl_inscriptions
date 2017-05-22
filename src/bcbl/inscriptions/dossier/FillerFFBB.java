@@ -28,7 +28,7 @@ public class FillerFFBB {
 		this.target = targetFolder;
 	}
 
-	public void generate(Licencie fbi, Licencie bcbl) throws IOException {
+	public File generate(Licencie fbi, Licencie bcbl) throws IOException {
 		String formTemplate = "./data/nouveau_formulaire_de_licence2.pdf";
 
 		// load the document
@@ -115,8 +115,10 @@ public class FillerFFBB {
 		}
 
 		// Save and close the filled out form.
-		pdfDocument.save(target + File.separator + bcbl.nom + "_" + bcbl.prenom + ".pdf");
+		File targetFile = new File(target + File.separator + bcbl.nom + "_" + bcbl.prenom + ".pdf");
+		pdfDocument.save(targetFile);
 		pdfDocument.close();
+		return targetFile;
 
 	}
 

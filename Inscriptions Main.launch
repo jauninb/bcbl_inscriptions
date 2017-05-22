@@ -5,7 +5,12 @@
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="Path" value="${workspace_loc:/bcbl_inscriptions/lib3}"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bcbl.inscriptions.dossier.Main"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-licenciesBCBL &quot;C:\usr\Personnel\basket\equipes\saison 2017_2018\2017-2018 Listing Licencies.xls&quot; -licenciesFBI &quot;C:\usr\Personnel\basket\equipes\saison 2016_2017\M01_qualifies_complet_L_E_P_V.xls&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-licenciesBCBL &quot;C:\usr\Personnel\basket\equipes\saison 2017_2018\2017-2018 Listing Licencies.xls&quot; -licenciesFBI &quot;C:\usr\Personnel\basket\equipes\saison 2016_2017\M01_qualifies_complet_L_E_P_V.xls&quot; -licence VT732625 -noCheck"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="bcbl_inscriptions"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>
