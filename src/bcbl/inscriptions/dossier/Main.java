@@ -2,8 +2,11 @@ package bcbl.inscriptions.dossier;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
@@ -11,6 +14,9 @@ import java.util.Properties;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class Main {
+
+	private static DateFormat dateLogFormat = SimpleDateFormat.getDateTimeInstance(DateFormat.MEDIUM,
+			DateFormat.MEDIUM);
 
 	public static void main(String[] args) {
 		String licenciesBCBL = null;
@@ -171,8 +177,8 @@ public class Main {
 			try {
 				Licencie fbi = fbiLicencies.get(bcbl.licence);
 
-				System.out.println(
-						(i++) + " - Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				System.out.println((i++) + " - Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
+						+ bcbl.prenom + " - " + dateLogFormat.format(new Date()));
 				File[] attachments = new File[2];
 				System.out
 						.println("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
@@ -184,19 +190,16 @@ public class Main {
 				System.out.println("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
 						Integer.parseInt(configuration.getProperty("mail.smtp.port")),
-						configuration.getProperty("mail.user"), configuration.getProperty("mail.password"));
-				// emailEmitter.sendEmail(fbi, bcbl, attachments);
+						configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
+						configuration.getProperty("bcbl.mail.title"), configuration.getProperty("bcbl.mail.message"));
+
+				bcbl.email1 = "jauninb@yahoo.fr";
+
+				emailEmitter.sendEmail(fbi, bcbl, attachments);
 
 			} catch (Exception ioe) {
 				ioe.printStackTrace();
 			}
-
-			/*
-			 * try { EmailEmitter emailEmitter = new
-			 * EmailEmitter("smtp.mail.yahoo.com", 587, "", "");
-			 * emailEmitter.sendEmail(null, null, null); } catch (Exception e) {
-			 * e.printStackTrace(); }
-			 */
 
 			if (delay > 0) {
 				try {

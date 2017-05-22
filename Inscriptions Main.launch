@@ -6,7 +6,7 @@
 <listEntry value="1"/>
 </listAttribute>
 <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="Path" value="${workspace_loc:/bcbl_inscriptions/lib3}"/>
+<mapEntry key="Path" value="${workspace_loc:/bcbl_inscriptions/lib}"/>
 </mapAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bcbl.inscriptions.dossier.Main"/>

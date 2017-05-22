@@ -2,6 +2,7 @@ package bcbl.inscriptions.dossier;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.Date;
 import java.util.Properties;
 
@@ -18,17 +19,18 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-
 public class EmailEmitter {
-	
+
 	private Session session;
 	private String userName;
+	private String titleTemplate;
+	private String messageTemplate;
 
-	public EmailEmitter(String host, int port, String userName, String password) {
+	public EmailEmitter(String host, int port, String userName, String password, String title, String message) {
 		this.userName = userName;
-        // sets SMTP server properties
-        Properties properties = new Properties();
-        properties.put("mail.debug", true);
+		// sets SMTP server properties
+		Properties properties = new Properties();
+		properties.put("mail.debug", true);
 		properties.put("mail.user", userName);
 		properties.put("mail.password", password);
 		properties.put("mail.smtp.host", host);
@@ -42,47 +44,50 @@ public class EmailEmitter {
 				return new PasswordAuthentication(userName, password);
 			}
 		};
-		session = Session.getInstance(properties, auth);
+		this.session = Session.getInstance(properties, auth);
+		this.titleTemplate = title;
+		this.messageTemplate = message;
 	}
 
 	public void sendEmail(Licencie fbi, Licencie bcbl, File[] attachments) throws AddressException, MessagingException {
-        Message msg = new MimeMessage(session);
-        
-        msg.setFrom(new InternetAddress(this.userName));
-        InternetAddress[] toAddresses = { new InternetAddress(/*bcbl.email1*/"jauninb@yahoo.fr") };
-        msg.setRecipients(Message.RecipientType.TO, toAddresses);
-        msg.setSubject("Dossier Renouvellement BCBL:" + bcbl.nom + " " + bcbl.prenom);
-        msg.setSentDate(new Date());
- 
-        // creates message part
-        MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent("Renouvellement du dossier de licence", "text/html");
- 
-        // creates multi-part
-        Multipart multipart = new MimeMultipart();
-        multipart.addBodyPart(messageBodyPart);
- 
-        // adds attachments
-        if (attachments != null && attachments.length > 0) {
-            for (File file : attachments) {
-                MimeBodyPart attachPart = new MimeBodyPart();
- 
-                try {
-                    attachPart.attachFile(file);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
- 
-                multipart.addBodyPart(attachPart);
-            }
-        }
- 
-        // sets the multi-part as e-mail's content
-        msg.setContent(multipart);
- 
-        // sends the e-mail
-        Transport.send(msg);
- 		
+		Message msg = new MimeMessage(session);
+
+		msg.setFrom(new InternetAddress(this.userName));
+		InternetAddress[] toAddresses = { new InternetAddress(bcbl.email1) };
+		msg.setRecipients(Message.RecipientType.TO, toAddresses);
+		msg.setRecipients(Message.RecipientType.CC, toAddresses);
+		msg.setSubject(MessageFormat.format(titleTemplate, bcbl.nom, bcbl.prenom));
+		msg.setSentDate(new Date());
+
+		// creates message part
+		MimeBodyPart messageBodyPart = new MimeBodyPart();
+		messageBodyPart.setText(MessageFormat.format(messageTemplate, bcbl.nom, bcbl.prenom));
+
+		// creates multi-part
+		Multipart multipart = new MimeMultipart();
+		multipart.addBodyPart(messageBodyPart);
+
+		// adds attachments
+		if (attachments != null && attachments.length > 0) {
+			for (File file : attachments) {
+				MimeBodyPart attachPart = new MimeBodyPart();
+
+				try {
+					attachPart.attachFile(file);
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+
+				multipart.addBodyPart(attachPart);
+			}
+		}
+
+		// sets the multi-part as e-mail's content
+		msg.setContent(multipart);
+
+		// sends the e-mail
+		Transport.send(msg);
+
 	}
 
 }

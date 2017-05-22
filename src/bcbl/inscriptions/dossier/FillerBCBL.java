@@ -81,7 +81,7 @@ public class FillerBCBL {
 			if (System.getProperty("os.arch").contains("64")) {
 				System.load("jacob-1.18-x64.dll");
 			} else {
-				System.load("jacob-1.18-x32.dll");
+				System.load("jacob-1.18-x86.dll");
 			}
 		} catch (Error error) {
 			// Fallback to iText and POI
