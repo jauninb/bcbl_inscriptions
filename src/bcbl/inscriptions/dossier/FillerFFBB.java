@@ -13,6 +13,8 @@ import org.apache.pdfbox.pdmodel.interactive.form.PDTextField;
 
 public class FillerFFBB {
 
+	public static String FFBB_FORMULAIRE_TEMPLATE_PATH = "./data/nouveau_formulaire_de_licence2.pdf";
+			
 	private static Calendar now = Calendar.getInstance();
 	static {
 		now.setTime(new Date());
@@ -28,10 +30,8 @@ public class FillerFFBB {
 	}
 
 	public File generate(Licencie fbi, Licencie bcbl) throws IOException {
-		String formTemplate = "./data/nouveau_formulaire_de_licence2.pdf";
-
 		// load the document
-		PDDocument pdfDocument = PDDocument.load(new File(formTemplate));
+		PDDocument pdfDocument = PDDocument.load(new File(FFBB_FORMULAIRE_TEMPLATE_PATH));
 
 		// get the document catalog
 		PDAcroForm acroForm = pdfDocument.getDocumentCatalog().getAcroForm();

@@ -169,6 +169,7 @@ public class Main {
 			configuration.load(new FileInputStream("./configuration/configuration.properties"));
 		} catch (Exception e) {
 			logger.error(e);
+			e.printStackTrace();
 		}
 
 		FillerFFBB fillerFFBB = new FillerFFBB(output);
@@ -182,14 +183,20 @@ public class Main {
 				logger.info((i + 1) + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
 						+ bcbl.prenom);
 				File[] attachments = new File[2];
-				logger.info("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
-				attachments[0] = fillerFFBB.generate(fbi, bcbl);
 				logger.info("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[1] = fillerBCBL.generate(fbi, bcbl);
+				
+				if (fbi != null) {
+					logger.info("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+					attachments[0] = fillerFFBB.generate(fbi, bcbl);
+				} else {
+					logger.warn("Pas d'enregistrement FBI pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + " - envoi de l'imprimé FFBB vierge");
+					attachments[0] = new File(FillerFFBB.FFBB_FORMULAIRE_TEMPLATE_PATH);
+				}
 
 				if (!noMail) {
 					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "
-							+ bcbl.email1 + (bcbl.email2 != null ? ", " + bcbl.email2 : ""));
+							+ bcbl.email1 + (bcbl.email2 != null && bcbl.email2.trim().length() > 0 ? ", " + bcbl.email2 : ""));
 					EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
 							Integer.parseInt(configuration.getProperty("mail.smtp.port")),
 							configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
@@ -197,15 +204,16 @@ public class Main {
 							configuration.getProperty("bcbl.mail.message"));
 
 					bcbl.email1 = "jauninb@yahoo.fr";
-					//bcbl.email2 = "jauninb@gmail.com";
+					bcbl.email2 = "jauninb@gmail.com";
 
 					emailEmitter.sendEmail(fbi, bcbl, attachments);
 				}
 				logger.info(
 						(i + 1) + " - Fin Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 
-			} catch (Exception ioe) {
-				logger.error(ioe);
+			} catch (Exception e) {
+				logger.error(e);
+				e.printStackTrace();
 			}
 
 			if (i + 1 < max && delay > 0) {

@@ -55,45 +55,48 @@ public class EmailEmitter {
 
 		msg.setFrom(new InternetAddress(this.userName));
 		ArrayList<InternetAddress> toAddresses = new ArrayList<InternetAddress>(2);
-		if (bcbl.email1 != null) {
+		if (bcbl.email1 != null && bcbl.email1.trim().length() > 0) {
 			toAddresses.add(new InternetAddress(bcbl.email1));
 		}
-		if (bcbl.email2 != null) {
+		if (bcbl.email2 != null && bcbl.email2.trim().length() > 0) {
 			toAddresses.add(new InternetAddress(bcbl.email2));
 		}
-		msg.setRecipients(Message.RecipientType.TO, toAddresses.toArray(new InternetAddress[toAddresses.size()]));
-		msg.setRecipients(Message.RecipientType.CC, new InternetAddress[] {new InternetAddress(this.userName)});
-		msg.setSubject(MessageFormat.format(titleTemplate, bcbl.nom, bcbl.prenom));
-		msg.setSentDate(new Date());
 
-		// creates message part
-		MimeBodyPart messageBodyPart = new MimeBodyPart();
-		messageBodyPart.setText(MessageFormat.format(messageTemplate, bcbl.nom, bcbl.prenom));
+		if (!toAddresses.isEmpty()) {
+			msg.setRecipients(Message.RecipientType.TO, toAddresses.toArray(new InternetAddress[toAddresses.size()]));
+			msg.setRecipients(Message.RecipientType.CC, new InternetAddress[] { new InternetAddress(this.userName) });
+			msg.setSubject(MessageFormat.format(titleTemplate, bcbl.nom, bcbl.prenom));
+			msg.setSentDate(new Date());
 
-		// creates multi-part
-		Multipart multipart = new MimeMultipart();
-		multipart.addBodyPart(messageBodyPart);
+			// creates message part
+			MimeBodyPart messageBodyPart = new MimeBodyPart();
+			messageBodyPart.setText(MessageFormat.format(messageTemplate, bcbl.nom, bcbl.prenom));
 
-		// adds attachments
-		if (attachments != null && attachments.length > 0) {
-			for (File file : attachments) {
-				MimeBodyPart attachPart = new MimeBodyPart();
+			// creates multi-part
+			Multipart multipart = new MimeMultipart();
+			multipart.addBodyPart(messageBodyPart);
 
-				try {
-					attachPart.attachFile(file);
-				} catch (IOException ex) {
-					ex.printStackTrace();
+			// adds attachments
+			if (attachments != null && attachments.length > 0) {
+				for (File file : attachments) {
+					MimeBodyPart attachPart = new MimeBodyPart();
+
+					try {
+						attachPart.attachFile(file);
+					} catch (IOException ex) {
+						ex.printStackTrace();
+					}
+
+					multipart.addBodyPart(attachPart);
 				}
-
-				multipart.addBodyPart(attachPart);
 			}
+
+			// sets the multi-part as e-mail's content
+			msg.setContent(multipart);
+
+			// sends the e-mail
+			Transport.send(msg);
 		}
-
-		// sets the multi-part as e-mail's content
-		msg.setContent(multipart);
-
-		// sends the e-mail
-		Transport.send(msg);
 
 	}
 
