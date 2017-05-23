@@ -2,21 +2,19 @@ package bcbl.inscriptions.dossier;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class Main {
 
-	private static DateFormat dateLogFormat = SimpleDateFormat.getDateTimeInstance(DateFormat.MEDIUM,
-			DateFormat.MEDIUM);
+	private static Logger logger = LogManager.getLogger(Main.class.getPackage().getName());
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
@@ -28,6 +26,7 @@ public class Main {
 		boolean noCheck = false;
 		int delay = 0;
 		String output = ".";
+		boolean noMail = false;
 
 		for (int i = 0; i < args.length; i++) {
 			if ("-licenciesFBI".equals(args[i])) {
@@ -46,16 +45,18 @@ public class Main {
 				delay = Integer.parseInt(args[++i]);
 			} else if ("-output".equals(args[i])) {
 				output = args[++i];
+			} else if ("-noMail".equals(args[i])) {
+				noMail = true;
 			}
 		}
 
 		if (licenciesFBI == null) {
-			System.err.println("Fichier d'extraction licenciés FBI non spécifié");
+			logger.error("Fichier d'extraction licenciés FBI non spécifié");
 			System.exit(1);
 		}
 
 		if (licenciesBCBL == null) {
-			System.err.println("Fichier licenciés BCBL non spécifié");
+			logger.error("Fichier licenciés BCBL non spécifié");
 			System.exit(1);
 		}
 
@@ -90,15 +91,14 @@ public class Main {
 			for (Licencie bcbl : listOfLicenciesBCBL) {
 				Licencie fbi = fbiLicencies.get(bcbl.licence);
 				if (fbi == null) {
-					System.err.println(
-							"Pas de licencié trouvé pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+					logger.warn("Pas de licencié trouvé pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 					continue;
 				}
 				// fbi n'a qu'un seul email - contrairement à bcbl
 				if (fbi.email1 != null && fbi.email1.trim().length() > 0
 						&& !(fbi.email1.equalsIgnoreCase(bcbl.email1) || fbi.email1.equalsIgnoreCase(bcbl.email2))) {
-					System.err.println("FBI eMail (" + fbi.email1 + ") non concordant pour " + bcbl.licence + " - "
-							+ bcbl.nom + " " + bcbl.prenom + ": " + bcbl.email1
+					logger.warn("FBI eMail (" + fbi.email1 + ") non concordant pour " + bcbl.licence + " - " + bcbl.nom
+							+ " " + bcbl.prenom + ": " + bcbl.email1
 							+ ((bcbl.email2 != null && bcbl.email2.trim().length() > 0) ? " ou " + bcbl.email2 : ""));
 				}
 
@@ -126,8 +126,8 @@ public class Main {
 				List<String> commonPhones = new ArrayList<String>(fbiPhones);
 				commonPhones.retainAll(bcblPhones);
 				if (commonPhones.size() == 0) {
-					System.err.println("FBI téléphones (" + fbiPhones + ") n'a aucun numéros concordants pour "
-							+ bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": " + bcblPhones);
+					logger.warn("FBI téléphones (" + fbiPhones + ") n'a aucun numéros concordants pour " + bcbl.licence
+							+ " - " + bcbl.nom + " " + bcbl.prenom + ": " + bcblPhones);
 				}
 			}
 		}
@@ -144,7 +144,7 @@ public class Main {
 				}
 			}
 			if (bcbl == null) {
-				System.err.println("Pas de licenciés BCBL trouvé avec licence " + licence);
+				logger.error("Pas de licenciés BCBL trouvé avec licence " + licence);
 				System.exit(1);
 			} else {
 				licenciesBCBLToProcess.add(bcbl);
@@ -168,7 +168,7 @@ public class Main {
 		try {
 			configuration.load(new FileInputStream("./configuration/configuration.properties"));
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 
 		FillerFFBB fillerFFBB = new FillerFFBB(output);
@@ -178,28 +178,31 @@ public class Main {
 			try {
 				Licencie fbi = fbiLicencies.get(bcbl.licence);
 
-				System.out.println((i++) + " - Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
-						+ bcbl.prenom + " - " + dateLogFormat.format(new Date()));
+				logger.info(
+						i + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				File[] attachments = new File[2];
-				System.out
-						.println("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				logger.info("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[0] = fillerFFBB.generate(fbi, bcbl);
-				System.out
-						.println("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				logger.info("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[1] = fillerBCBL.generate(fbi, bcbl);
 
-				System.out.println("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
-				EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
-						Integer.parseInt(configuration.getProperty("mail.smtp.port")),
-						configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
-						configuration.getProperty("bcbl.mail.title"), configuration.getProperty("bcbl.mail.message"));
+				if (!noMail) {
+					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+					EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
+							Integer.parseInt(configuration.getProperty("mail.smtp.port")),
+							configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
+							configuration.getProperty("bcbl.mail.title"),
+							configuration.getProperty("bcbl.mail.message"));
 
-				bcbl.email1 = "jauninb@yahoo.fr";
+					bcbl.email1 = "jauninb@yahoo.fr";
 
-				emailEmitter.sendEmail(fbi, bcbl, attachments);
+					emailEmitter.sendEmail(fbi, bcbl, attachments);
+				}
+				logger.info(
+						(i++) + " - Fin Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 
 			} catch (Exception ioe) {
-				ioe.printStackTrace();
+				logger.error(ioe);
 			}
 
 			if (delay > 0) {
