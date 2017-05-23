@@ -3,6 +3,7 @@ package bcbl.inscriptions.dossier;
 import java.io.File;
 import java.io.IOException;
 import java.text.MessageFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 
@@ -53,9 +54,15 @@ public class EmailEmitter {
 		Message msg = new MimeMessage(session);
 
 		msg.setFrom(new InternetAddress(this.userName));
-		InternetAddress[] toAddresses = { new InternetAddress(bcbl.email1) };
-		msg.setRecipients(Message.RecipientType.TO, toAddresses);
-		msg.setRecipients(Message.RecipientType.CC, toAddresses);
+		ArrayList<InternetAddress> toAddresses = new ArrayList<InternetAddress>(2);
+		if (bcbl.email1 != null) {
+			toAddresses.add(new InternetAddress(bcbl.email1));
+		}
+		if (bcbl.email2 != null) {
+			toAddresses.add(new InternetAddress(bcbl.email2));
+		}
+		msg.setRecipients(Message.RecipientType.TO, toAddresses.toArray(new InternetAddress[toAddresses.size()]));
+		msg.setRecipients(Message.RecipientType.CC, new InternetAddress[] {new InternetAddress(this.userName)});
 		msg.setSubject(MessageFormat.format(titleTemplate, bcbl.nom, bcbl.prenom));
 		msg.setSentDate(new Date());
 

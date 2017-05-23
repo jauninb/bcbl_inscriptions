@@ -173,13 +173,14 @@ public class Main {
 
 		FillerFFBB fillerFFBB = new FillerFFBB(output);
 		FillerBCBL fillerBCBL = new FillerBCBL(output, configuration.getProperty("bcbl.dossier"));
-		int i = 1;
-		for (Licencie bcbl : licenciesBCBLToProcess) {
+		int max = licenciesBCBLToProcess.size();
+		for (int i = 0; i < max; i++) {
+			Licencie bcbl = licenciesBCBLToProcess.get(0);
 			try {
 				Licencie fbi = fbiLicencies.get(bcbl.licence);
 
-				logger.info(
-						i + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+				logger.info((i + 1) + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
+						+ bcbl.prenom);
 				File[] attachments = new File[2];
 				logger.info("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[0] = fillerFFBB.generate(fbi, bcbl);
@@ -187,7 +188,8 @@ public class Main {
 				attachments[1] = fillerBCBL.generate(fbi, bcbl);
 
 				if (!noMail) {
-					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "
+							+ bcbl.email1 + (bcbl.email2 != null ? ", " + bcbl.email2 : ""));
 					EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
 							Integer.parseInt(configuration.getProperty("mail.smtp.port")),
 							configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
@@ -195,17 +197,18 @@ public class Main {
 							configuration.getProperty("bcbl.mail.message"));
 
 					bcbl.email1 = "jauninb@yahoo.fr";
+					//bcbl.email2 = "jauninb@gmail.com";
 
 					emailEmitter.sendEmail(fbi, bcbl, attachments);
 				}
 				logger.info(
-						(i++) + " - Fin Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
+						(i + 1) + " - Fin Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 
 			} catch (Exception ioe) {
 				logger.error(ioe);
 			}
 
-			if (delay > 0) {
+			if (i + 1 < max && delay > 0) {
 				try {
 					Thread.sleep(delay * 1000);
 				} catch (InterruptedException e) {
