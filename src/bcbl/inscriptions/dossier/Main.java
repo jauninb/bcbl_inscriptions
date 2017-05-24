@@ -1,7 +1,9 @@
 package bcbl.inscriptions.dossier;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -199,15 +201,30 @@ public class Main {
 				if (!noMail) {
 					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "
 							+ bcbl.email1 + (bcbl.email2 != null && bcbl.email2.trim().length() > 0 ? ", " + bcbl.email2 : ""));
+					
+					String message;
+					if (configuration.getProperty("bcbl.mail.template.path") != null) {
+						StringBuffer sb = new StringBuffer();
+						BufferedReader br = new BufferedReader(new FileReader(configuration.getProperty("bcbl.mail.template.path")));
+						String line = br.readLine();
+						while (line != null) {
+							sb.append(line);
+							line = br.readLine();
+						}
+						message = sb.toString();
+					} else {
+						message = configuration.getProperty("bcbl.mail.message");
+					}
+					
 					EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
 							Integer.parseInt(configuration.getProperty("mail.smtp.port")),
 							configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
 							configuration.getProperty("bcbl.mail.title"),
-							configuration.getProperty("bcbl.mail.message"));
+							message);
 
 					bcbl.email1 = "jauninb@yahoo.fr";
 					bcbl.email2 = "jauninb@gmail.com";
-
+					
 					emailEmitter.sendEmail(fbi, bcbl, attachments);
 				}
 				logger.info(

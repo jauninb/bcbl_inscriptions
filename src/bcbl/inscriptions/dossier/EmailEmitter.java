@@ -70,7 +70,7 @@ public class EmailEmitter {
 
 			// creates message part
 			MimeBodyPart messageBodyPart = new MimeBodyPart();
-			messageBodyPart.setText(MessageFormat.format(messageTemplate, bcbl.nom, bcbl.prenom));
+			messageBodyPart.setText(MessageFormat.format(messageTemplate, bcbl.nom, bcbl.prenom), "UTF-8", "html");
 
 			// creates multi-part
 			Multipart multipart = new MimeMultipart();
