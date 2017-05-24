@@ -16,7 +16,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class Main {
 
-	private static boolean DEBUG = true;
+	private static boolean DEBUG = false;
 	
 	private static Logger logger = LogManager.getLogger(Main.class.getPackage().getName());
 
