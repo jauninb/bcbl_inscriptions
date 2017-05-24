@@ -182,17 +182,19 @@ public class Main {
 
 				logger.info((i + 1) + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
 						+ bcbl.prenom);
-				File[] attachments = new File[2];
+				File[] attachments = new File[3];
 				logger.info("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
-				attachments[1] = fillerBCBL.generate(fbi, bcbl);
+				attachments[0] = fillerBCBL.generate(fbi, bcbl);
 				
 				if (fbi != null) {
 					logger.info("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
-					attachments[0] = fillerFFBB.generate(fbi, bcbl);
+					attachments[1] = fillerFFBB.generate(fbi, bcbl);
 				} else {
 					logger.warn("Pas d'enregistrement FBI pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + " - envoi de l'imprimé FFBB vierge");
-					attachments[0] = new File(FillerFFBB.FFBB_FORMULAIRE_TEMPLATE_PATH);
+					attachments[1] = new File(FillerFFBB.FFBB_FORMULAIRE_TEMPLATE_PATH);
 				}
+				
+				attachments[2] = new File(FillerFFBB.FFBB_QUESTIONNAIRE_SANTE_PATH);
 
 				if (!noMail) {
 					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "

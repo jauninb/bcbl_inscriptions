@@ -14,6 +14,8 @@ import org.apache.pdfbox.pdmodel.interactive.form.PDTextField;
 public class FillerFFBB {
 
 	public static String FFBB_FORMULAIRE_TEMPLATE_PATH = "./data/nouveau_formulaire_de_licence2.pdf";
+
+	public static String FFBB_QUESTIONNAIRE_SANTE_PATH = "./data/QUESTIONNAIRE DE SANTE FFBB 2017_2018.pdf";
 			
 	private static Calendar now = Calendar.getInstance();
 	static {
@@ -115,6 +117,10 @@ public class FillerFFBB {
 
 		// Save and close the filled out form.
 		File targetFile = new File(target + File.separator + "FFBB " + bcbl.nom + "_" + bcbl.prenom + ".pdf");
+		int nbPages = pdfDocument.getNumberOfPages();
+		for (int i=nbPages-1;i>0; i--) {
+			pdfDocument.removePage(i);
+		}
 		pdfDocument.save(targetFile);
 		pdfDocument.close();
 		return targetFile;
