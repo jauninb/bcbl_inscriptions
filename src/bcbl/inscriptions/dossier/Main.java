@@ -16,6 +16,8 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class Main {
 
+	private static boolean DEBUG = true;
+	
 	private static Logger logger = LogManager.getLogger(Main.class.getPackage().getName());
 
 	@SuppressWarnings("resource")
@@ -178,13 +180,13 @@ public class Main {
 		FillerBCBL fillerBCBL = new FillerBCBL(output, configuration.getProperty("bcbl.dossier"));
 		int max = licenciesBCBLToProcess.size();
 		for (int i = 0; i < max; i++) {
-			Licencie bcbl = licenciesBCBLToProcess.get(0);
+			Licencie bcbl = licenciesBCBLToProcess.get(i);
 			try {
 				Licencie fbi = fbiLicencies.get(bcbl.licence);
 
 				logger.info((i + 1) + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
 						+ bcbl.prenom);
-				File[] attachments = new File[3];
+				File[] attachments = new File[4];
 				logger.info("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[0] = fillerBCBL.generate(fbi, bcbl);
 				
@@ -197,35 +199,43 @@ public class Main {
 				}
 				
 				attachments[2] = new File(FillerFFBB.FFBB_QUESTIONNAIRE_SANTE_PATH);
+				
+				attachments[3] = new File(FillerFFBB.FFBB_NOTICE_ASSURANCE_PATH);
 
 				if (!noMail) {
-					logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "
-							+ bcbl.email1 + (bcbl.email2 != null && bcbl.email2.trim().length() > 0 ? ", " + bcbl.email2 : ""));
-					
-					String message;
-					if (configuration.getProperty("bcbl.mail.template.path") != null) {
-						StringBuffer sb = new StringBuffer();
-						BufferedReader br = new BufferedReader(new FileReader(configuration.getProperty("bcbl.mail.template.path")));
-						String line = br.readLine();
-						while (line != null) {
-							sb.append(line);
-							line = br.readLine();
-						}
-						message = sb.toString();
+					if ((bcbl.email1 != null && bcbl.email1.trim().length()==0) && (bcbl.email1 != null && bcbl.email1.trim().length()==0)) {
+						logger.warn("Pas d'email pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + " - envoi manuel à faire");
 					} else {
-						message = configuration.getProperty("bcbl.mail.message");
+						logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "
+								+ bcbl.email1 + (bcbl.email2 != null && bcbl.email2.trim().length() > 0 ? ", " + bcbl.email2 : ""));
+						
+						String message;
+						if (configuration.getProperty("bcbl.mail.template.path") != null) {
+							StringBuffer sb = new StringBuffer();
+							BufferedReader br = new BufferedReader(new FileReader(configuration.getProperty("bcbl.mail.template.path")));
+							String line = br.readLine();
+							while (line != null) {
+								sb.append(line);
+								line = br.readLine();
+							}
+							message = sb.toString();
+						} else {
+							message = configuration.getProperty("bcbl.mail.message");
+						}
+						
+						EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
+								Integer.parseInt(configuration.getProperty("mail.smtp.port")),
+								configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
+								configuration.getProperty("bcbl.mail.title"),
+								message);
+	
+						if (DEBUG) { 
+							bcbl.email1 = "jauninb@yahoo.fr";
+							bcbl.email2 = "jauninb@gmail.com";
+						}
+						
+						emailEmitter.sendEmail(fbi, bcbl, attachments);
 					}
-					
-					EmailEmitter emailEmitter = new EmailEmitter(configuration.getProperty("mail.smtp.host"),
-							Integer.parseInt(configuration.getProperty("mail.smtp.port")),
-							configuration.getProperty("mail.user"), configuration.getProperty("mail.password"),
-							configuration.getProperty("bcbl.mail.title"),
-							message);
-
-					bcbl.email1 = "jauninb@yahoo.fr";
-					bcbl.email2 = "jauninb@gmail.com";
-					
-					emailEmitter.sendEmail(fbi, bcbl, attachments);
 				}
 				logger.info(
 						(i + 1) + " - Fin Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);

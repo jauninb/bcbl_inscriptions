@@ -16,7 +16,9 @@ public class FillerFFBB {
 	public static String FFBB_FORMULAIRE_TEMPLATE_PATH = "./data/nouveau_formulaire_de_licence2.pdf";
 
 	public static String FFBB_QUESTIONNAIRE_SANTE_PATH = "./data/QUESTIONNAIRE DE SANTE FFBB 2017_2018.pdf";
-			
+
+	public static String FFBB_NOTICE_ASSURANCE_PATH = "./data/FFBB Notice Information Assurances.pdf";
+
 	private static Calendar now = Calendar.getInstance();
 	static {
 		now.setTime(new Date());
