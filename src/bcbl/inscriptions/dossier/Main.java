@@ -205,6 +205,7 @@ public class Main {
 				if (!noMail) {
 					if ((bcbl.email1 != null && bcbl.email1.trim().length()==0) && (bcbl.email1 != null && bcbl.email1.trim().length()==0)) {
 						logger.warn("Pas d'email pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + " - envoi manuel à faire");
+						// TODO Utilisation du mail de substitution bcbl.secretariat + Titre à compléter + Message
 					} else {
 						logger.info("Envoi mail pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + ": "
 								+ bcbl.email1 + (bcbl.email2 != null && bcbl.email2.trim().length() > 0 ? ", " + bcbl.email2 : ""));
