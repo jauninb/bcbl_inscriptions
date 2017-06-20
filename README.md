@@ -1,1 +1,1 @@
-# bcbl_inscriptions
+# Outil de création et d'envoi des dossiers d'inscriptions
