@@ -21,9 +21,9 @@ public class LicencieMiner {
 	private static int BCBL_EMAIL1_CELL_INDEX = indexOfColumn('R');
 	private static int BCBL_EMAIL2_CELL_INDEX = indexOfColumn('S');
 	private static int BCBL_TAILLE_CELL_INDEX = indexOfColumn('T');
-	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('U');
-	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('W');
-	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('X');
+	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('V');
+	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('X');
+	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('Y');
 
 	private static int FBI_STARTING_ROW = 11;
 	private static int FBI_NOM_CELL_INDEX = indexOfColumn('F');
