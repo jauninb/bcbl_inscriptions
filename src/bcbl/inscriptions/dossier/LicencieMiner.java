@@ -24,6 +24,8 @@ public class LicencieMiner {
 	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('U');
 	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('W');
 	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('X');
+	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('L');
+	
 
 	private static int FBI_STARTING_ROW = 11;
 	private static int FBI_NOM_CELL_INDEX = indexOfColumn('F');
@@ -103,6 +105,11 @@ public class LicencieMiner {
 				} else {
 					Cell cellNom = row.getCell(BCBL_NOM_CELL_INDEX);
 					if (cellNom == null || cellNom.getStringCellValue().trim().isEmpty()) {
+						continue;
+					}
+					Cell cellType = row.getCell(BCBL_TYPE_CELL_INDEX);
+					if (cellType != null && cellType.getStringCellValue().trim().equalsIgnoreCase("Bouaye")) {
+						// Skipping this because not a BCBL licencié
 						continue;
 					}
 					Licencie licencie = new Licencie();
