@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.poi.xwpf.usermodel.PositionInParagraph;
@@ -29,11 +30,13 @@ public class FillerBCBL {
 
 	private String target;
 	private String dossierBCBL;
+	private Date dateDebut;
 
-	public FillerBCBL(String targetFolder, String dossierBCBL) {
+	public FillerBCBL(String targetFolder, String dossierBCBL, Date dateDebut) {
 		super();
 		this.target = targetFolder;
 		this.dossierBCBL = dossierBCBL;
+		this.dateDebut = dateDebut;
 	}
 
 	public File generate(Licencie fbi, Licencie bcbl) throws Exception {

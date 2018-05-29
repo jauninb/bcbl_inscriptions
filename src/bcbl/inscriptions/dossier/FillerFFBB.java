@@ -31,12 +31,20 @@ public class FillerFFBB {
 
 	private ArrayList<Integer> anneesSurclassement;
 
+	private Date dateDebut;
+	
+	private int anneeDebutSaison;
+
 	private static SimpleDateFormat DD_MM_YYYY = new SimpleDateFormat("dd/MM/YYYY");
 
-	public FillerFFBB(String targetFolder, ArrayList<Integer> anneesSurclassement) {
+	public FillerFFBB(String targetFolder, ArrayList<Integer> anneesSurclassement, Date dateDebut) {
 		super();
 		this.target = targetFolder;
 		this.anneesSurclassement = anneesSurclassement;
+		this.dateDebut = dateDebut;
+		Calendar c = Calendar.getInstance();
+		c.setTime(dateDebut);
+		anneeDebutSaison = c.get(Calendar.YEAR);
 	}
 
 	public File generate(Licencie fbi, Licencie bcbl) throws IOException {
@@ -49,7 +57,7 @@ public class FillerFFBB {
 		// as there might not be an AcroForm entry a null check is necessary
 		if (acroForm != null) {
 
-			if (false) {
+			if (Main.DEBUG) {
 				for (PDField field : acroForm.getFields()) {
 					System.out.println(field.getFullyQualifiedName() + " - " + field.getClass().getTypeName());
 				}
@@ -124,7 +132,38 @@ public class FillerFFBB {
 			email.setValue(fbi.email1);
 			
 			// Nécessité d'un certificat médical
-			boolean needCertificatMedical = true;
+			// La règle de validité du certificat médical est: un certificat médical effectué après le 1er juin d'une saison est valable les 2 saisons suivantes
+			// exemple : CM fait le 10 juin 2017 valable pour les saisons 2017-2018 2018-2019 2019-2020
+			boolean needCertificatMedical = false;
+			if (fbi.certificat_medical != null) {
+				Calendar datePivotCertificat = Calendar.getInstance();
+				datePivotCertificat.setTime(fbi.certificat_medical);
+				datePivotCertificat.set(Calendar.DAY_OF_MONTH, 1);
+				datePivotCertificat.set(Calendar.MONTH, 6);
+				
+				Calendar cCertificatMedical = Calendar.getInstance();
+				cCertificatMedical.setTime(fbi.certificat_medical);
+				int certificatSaisonDebutValidite;
+				if (cCertificatMedical.before(datePivotCertificat)) {
+					certificatSaisonDebutValidite = datePivotCertificat.get(Calendar.YEAR) - 1;
+				} else {
+					certificatSaisonDebutValidite = datePivotCertificat.get(Calendar.YEAR);
+				}
+				
+				if (certificatSaisonDebutValidite + 2 >= anneeDebutSaison ) {
+					// Certificat valide
+					if (Main.DEBUG) {
+						System.out.println("certificat medical en date du " + fbi.certificat_medical);
+						System.out.println("certificat medical valide depuis la saison " + certificatSaisonDebutValidite + "/" + (certificatSaisonDebutValidite + 1));
+						System.out.println("certificat medical valide jusqu'a la saison " + (certificatSaisonDebutValidite + 2) + "/" + ((certificatSaisonDebutValidite + 2) + 1));
+					}
+				} else {
+					// Certificat expiré
+					needCertificatMedical = true;
+				}
+				
+			}
+			
 			boolean needSurclassement = anneesSurclassement.contains(cNaissance.get(Calendar.YEAR));
 			
 			if (needCertificatMedical || needSurclassement) {

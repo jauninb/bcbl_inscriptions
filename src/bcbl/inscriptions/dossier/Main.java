@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
@@ -17,7 +19,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
 public class Main {
 
-	private static boolean DEBUG = false;
+	public static final boolean DEBUG = true;
 	
 	private static Logger logger = LogManager.getLogger(Main.class.getPackage().getName());
 
@@ -182,9 +184,16 @@ public class Main {
 		while (st.hasMoreTokens()) {
 			anneesSurclassement.add(Integer.parseInt(st.nextToken().trim()));
 		}
+		
+		Date dateDebut = null;
+		try {
+			dateDebut = new SimpleDateFormat("dd/MM/yyyy").parse(configuration.getProperty("bcbl.date_debut_saison"));
+		} catch (Exception e) {
+			System.err.println(e);
+		}
 
-		FillerFFBB fillerFFBB = new FillerFFBB(output, anneesSurclassement);
-		FillerBCBL fillerBCBL = new FillerBCBL(output, configuration.getProperty("bcbl.dossier"));
+		FillerFFBB fillerFFBB = new FillerFFBB(output, anneesSurclassement, dateDebut);
+		FillerBCBL fillerBCBL = new FillerBCBL(output, configuration.getProperty("bcbl.dossier"), dateDebut);
 		int max = licenciesBCBLToProcess.size();
 		for (int i = 0; i < max; i++) {
 			Licencie bcbl = licenciesBCBLToProcess.get(i);
