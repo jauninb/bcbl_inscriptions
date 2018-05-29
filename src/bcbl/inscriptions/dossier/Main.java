@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
+import java.util.StringTokenizer;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -108,7 +109,7 @@ public class Main {
 
 				// vérification des n° de téléphone
 				List<String> fbiPhones = new ArrayList<String>();
-				String[] phones = { fbi.telephone, fbi.portable1, fbi.portable2 };
+				String[] phones = { fbi.telephone1, fbi.telephone2, fbi.telephone3 };
 				for (String phone : phones) {
 					if (phone != null && phone.trim().length() > 0) {
 						String s = phone.trim().replaceAll("[^\\d.]", "");
@@ -118,7 +119,7 @@ public class Main {
 					}
 				}
 				List<String> bcblPhones = new ArrayList<String>();
-				phones = new String[] { bcbl.telephone, bcbl.portable1, bcbl.portable2 };
+				phones = new String[] { bcbl.telephone1, bcbl.telephone2, bcbl.telephone3 };
 				for (String phone : phones) {
 					if (phone != null && phone.trim().length() > 0) {
 						String s = phone.trim().replaceAll("[^\\d.]", "");
@@ -175,8 +176,14 @@ public class Main {
 			logger.error(e);
 			e.printStackTrace();
 		}
+		
+		ArrayList<Integer> anneesSurclassement = new ArrayList<Integer>();
+		StringTokenizer st = new StringTokenizer(configuration.getProperty("bcbl.surclassement.annees"), ",");
+		while (st.hasMoreTokens()) {
+			anneesSurclassement.add(Integer.parseInt(st.nextToken().trim()));
+		}
 
-		FillerFFBB fillerFFBB = new FillerFFBB(output);
+		FillerFFBB fillerFFBB = new FillerFFBB(output, anneesSurclassement);
 		FillerBCBL fillerBCBL = new FillerBCBL(output, configuration.getProperty("bcbl.dossier"));
 		int max = licenciesBCBLToProcess.size();
 		for (int i = 0; i < max; i++) {

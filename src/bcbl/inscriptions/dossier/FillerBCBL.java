@@ -61,11 +61,14 @@ public class FillerBCBL {
 		replaceInParagraphs("«LICENCE»", bcbl.licence, licenceCell.getParagraphs());
 		XWPFTableRow row3 = table.getRows().get(2);
 		XWPFTableCell fixeCell = row3.getCell(0);
-		replaceInParagraphs("«TELEPHONE»", bcbl.telephone, fixeCell.getParagraphs());
+		replaceInParagraphs("«TEL1»", bcbl.telephone1, fixeCell.getParagraphs());
 		XWPFTableCell portableCell = row3.getCell(1);
-		replaceInParagraphs("«PORTABLE»", bcbl.portable1, portableCell.getParagraphs());
-		XWPFTableCell mailCell = row3.getCell(2);
-		replaceInParagraphs("«EMAIL»", bcbl.email1, mailCell.getParagraphs());
+		replaceInParagraphs("«TEL2»", bcbl.telephone2, portableCell.getParagraphs());
+		XWPFTableRow row4 = table.getRows().get(3);
+		XWPFTableCell mail1Cell = row4.getCell(0);
+		replaceInParagraphs("«MAIL1»", bcbl.email1, mail1Cell.getParagraphs());
+		XWPFTableCell mail2Cell = row4.getCell(1);
+		replaceInParagraphs("«MAIL2»", bcbl.email2, mail2Cell.getParagraphs());
 
 		File tmpFile = File.createTempFile("BCBL " + bcbl.nom + "_" + bcbl.prenom, ".docx");
 		// System.out.println(tmpFile.getAbsolutePath());
