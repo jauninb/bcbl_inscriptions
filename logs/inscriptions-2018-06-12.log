@@ -1,0 +1,5 @@
+2018-06-12 12:46:49,308 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: BC029533 - LAMBERT Clara
+2018-06-12 12:46:49,310 INFO b.i.dossier [main] Genération Imprimé BCBL pour BC029533 - LAMBERT Clara
+2018-06-12 12:46:52,091 INFO b.i.dossier [main] Genération Imprimé FFBB pour BC029533 - LAMBERT Clara
+2018-06-12 12:46:53,584 INFO b.i.dossier [main] Envoi mail pour BC029533 - LAMBERT Clara: clara.lambert090602@gmail.com, eric.lambert@naval-group.com
+2018-06-12 12:47:56,163 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: BC029533 - LAMBERT Clara
