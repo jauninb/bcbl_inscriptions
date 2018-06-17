@@ -11,7 +11,6 @@ import java.util.GregorianCalendar;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDCheckBox;
-import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDTextField;
 
 public class FillerFFBB {
@@ -57,13 +56,13 @@ public class FillerFFBB {
 		// as there might not be an AcroForm entry a null check is necessary
 		if (acroForm != null) {
 
-			if (Main.DEBUG) {
+			/*if (Main.DEBUG) {
 				for (PDField field : acroForm.getFields()) {
 					System.out.println(field.getFullyQualifiedName() + " - " + field.getClass().getTypeName());
 				}
 				System.out.println("Licencie FFBB:" + fbi.toString());
 				System.out.println("Licencie BCBL:" + bcbl.toString());
-			}			
+			}*/			
 
 			String bcblNomPrenom = bcbl.prenom.substring(0, 1).toUpperCase() + bcbl.prenom.substring(1).toLowerCase() + " "
 					+ bcbl.nom.substring(0, 1).toUpperCase() + bcbl.nom.substring(1).toLowerCase();
@@ -136,18 +135,27 @@ public class FillerFFBB {
 			// exemple : CM fait le 10 juin 2017 valable pour les saisons 2017-2018 2018-2019 2019-2020
 			boolean needCertificatMedical = false;
 			if (fbi.certificat_medical != null) {
-				Calendar datePivotCertificat = Calendar.getInstance();
+				Calendar datePivotCertificat = GregorianCalendar.getInstance();
 				datePivotCertificat.setTime(fbi.certificat_medical);
 				datePivotCertificat.set(Calendar.DAY_OF_MONTH, 1);
-				datePivotCertificat.set(Calendar.MONTH, 6);
+				datePivotCertificat.set(Calendar.MONTH, 5);
 				
-				Calendar cCertificatMedical = Calendar.getInstance();
+				Calendar cCertificatMedical = GregorianCalendar.getInstance();
 				cCertificatMedical.setTime(fbi.certificat_medical);
 				int certificatSaisonDebutValidite;
 				if (cCertificatMedical.before(datePivotCertificat)) {
 					certificatSaisonDebutValidite = datePivotCertificat.get(Calendar.YEAR) - 1;
 				} else {
 					certificatSaisonDebutValidite = datePivotCertificat.get(Calendar.YEAR);
+				}
+				
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+				if (Main.DEBUG) {
+					System.out.println("datePivotCertificat:" + sdf.format(datePivotCertificat.getTime()));
+					System.out.println("cCertificatMedical:" + sdf.format(cCertificatMedical.getTime()));
+					System.out.println("certificatSaisonDebutValidite: " + certificatSaisonDebutValidite);
+					System.out.println("anneeDebutSaison: " + anneeDebutSaison);
 				}
 				
 				if (certificatSaisonDebutValidite + 2 >= anneeDebutSaison ) {
@@ -165,6 +173,11 @@ public class FillerFFBB {
 			}
 			
 			boolean needSurclassement = anneesSurclassement.contains(cNaissance.get(Calendar.YEAR));
+			
+			if (Main.DEBUG) {
+				System.out.println("besoin de certificat " + needCertificatMedical);
+				System.out.println("besoin de surclassement " + needSurclassement);
+			}
 			
 			if (needCertificatMedical || needSurclassement) {
 				PDTextField nomLicencie = (PDTextField) acroForm.getField("Nom licencié 1");
