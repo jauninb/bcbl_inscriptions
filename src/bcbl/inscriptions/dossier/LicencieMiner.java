@@ -1,6 +1,7 @@
 package bcbl.inscriptions.dossier;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -15,16 +16,16 @@ public class LicencieMiner {
 	private static int BCBL_NOM_CELL_INDEX = indexOfColumn('F');
 	private static int BCBL_PRENOM_CELL_INDEX = indexOfColumn('G');
 	private static int BCBL_CATEGORIE_CELL_INDEX = indexOfColumn('I');
-	private static int BCBL_LICENCE_CELL_INDEX = indexOfColumn('N');
-	private static int BCBL_TELEPHONE1_CELL_INDEX = indexOfColumn('O');
-	private static int BCBL_TELEPHONE2_CELL_INDEX = indexOfColumn('P');
-	private static int BCBL_EMAIL1_CELL_INDEX = indexOfColumn('Q');
-	private static int BCBL_EMAIL2_CELL_INDEX = indexOfColumn('R');
-	private static int BCBL_TAILLE_CELL_INDEX = indexOfColumn('S');
-	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('U');
-	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('W');
-	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('X');
-	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('L');
+	private static int BCBL_LICENCE_CELL_INDEX = indexOfColumn('O');
+	private static int BCBL_TELEPHONE1_CELL_INDEX = indexOfColumn('P');
+	private static int BCBL_TELEPHONE2_CELL_INDEX = indexOfColumn('Q');
+	private static int BCBL_EMAIL1_CELL_INDEX = indexOfColumn('R');
+	private static int BCBL_EMAIL2_CELL_INDEX = indexOfColumn('S');
+	private static int BCBL_TAILLE_CELL_INDEX = indexOfColumn('T');
+	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('V');
+	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('X');
+	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('Y');
+	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('M');
 	
 
 	private static int FBI_STARTING_ROW = 11;
@@ -118,7 +119,11 @@ public class LicencieMiner {
 					licencie.categorie = row.getCell(BCBL_CATEGORIE_CELL_INDEX).getStringCellValue();
 					licencie.email1 = row.getCell(BCBL_EMAIL1_CELL_INDEX).getStringCellValue();
 					licencie.email2 = row.getCell(BCBL_EMAIL2_CELL_INDEX).getStringCellValue();
-					licencie.naissance = row.getCell(BCBL_NAISSANCE_CELL_INDEX).getDateCellValue();
+					try {
+						licencie.naissance = row.getCell(BCBL_NAISSANCE_CELL_INDEX).getDateCellValue();
+					} catch (Exception e) {
+						licencie.naissance = new Date();
+					}
 					licencie.licence = row.getCell(BCBL_LICENCE_CELL_INDEX).getStringCellValue().trim();
 					licencie.telephone1 = row.getCell(BCBL_TELEPHONE1_CELL_INDEX).getStringCellValue();
 					licencie.telephone2 = row.getCell(BCBL_TELEPHONE2_CELL_INDEX).getStringCellValue();
