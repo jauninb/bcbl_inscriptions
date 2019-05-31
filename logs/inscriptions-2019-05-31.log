@@ -385,3 +385,406 @@
 2019-05-31 15:20:38,568 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT714824 - JAUNIN Chrystèle
 2019-05-31 15:20:39,633 INFO b.i.dossier [main] Envoi mail pour VT714824 - JAUNIN Chrystèle: ch_jaunin@yahoo.fr
 2019-05-31 15:21:44,229 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT714824 - JAUNIN Chrystèle
+2019-05-31 15:34:48,527 WARN b.i.dossier [main] Pas de licencié trouvé pour BC000008 - BESSEMOULIN Alix
+2019-05-31 15:34:48,529 WARN b.i.dossier [main] Pas de licencié trouvé pour BC005767 - POGU-ARNAUD Kévin
+2019-05-31 15:34:48,529 WARN b.i.dossier [main] Pas de licencié trouvé pour BC006265 - BUCHY Simon
+2019-05-31 15:34:48,529 WARN b.i.dossier [main] Pas de licencié trouvé pour BC009818 - CLEMENT Augustin
+2019-05-31 15:34:48,529 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010101 - AUTRET Lucas
+2019-05-31 15:34:48,529 WARN b.i.dossier [main] FBI eMail (donnat44@orange.fr) non concordant pour BC010269 - YVETOT Stanislas: domnat44@orange.fr
+2019-05-31 15:34:48,530 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010526 - MAROUSSIE Landry
+2019-05-31 15:34:48,530 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010731 - PIPEAU Pierre
+2019-05-31 15:34:48,530 WARN b.i.dossier [main] FBI eMail (yann.legay@orange.fr) non concordant pour BC010766 - LEGUAY Clément: yann.leguay@orange.fr
+2019-05-31 15:34:48,530 WARN b.i.dossier [main] Pas de licencié trouvé pour BC015479 - LUCAS Mano
+2019-05-31 15:34:48,530 WARN b.i.dossier [main] FBI eMail (nathalie.grolier@free.fr) non concordant pour BC016446 - GROLLIER Victor: nathalie.grollier@free.fr
+2019-05-31 15:34:48,531 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017650 - JAUNATRE Maxence
+2019-05-31 15:34:48,531 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017651 - JAUNATRE Tristan
+2019-05-31 15:34:48,531 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017895 - LE MEN Killian
+2019-05-31 15:34:48,531 WARN b.i.dossier [main] Pas de licencié trouvé pour BC018382 - GLANDUS Florian
+2019-05-31 15:34:48,532 WARN b.i.dossier [main] Pas de licencié trouvé pour BC024477 - PAGNIER Juliane
+2019-05-31 15:34:48,532 WARN b.i.dossier [main] Pas de licencié trouvé pour BC025096 - TEKIN Sénem
+2019-05-31 15:34:48,532 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029901 - ALLAIRE Chloé
+2019-05-31 15:34:48,532 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029961 - PHERON Hens
+2019-05-31 15:34:48,533 WARN b.i.dossier [main] Pas de licencié trouvé pour BC030047 - SALINGUE Axelle
+2019-05-31 15:34:48,533 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310146 - BOUDET Ambre
+2019-05-31 15:34:48,533 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310239 - CLEMENT Emilien
+2019-05-31 15:34:48,533 WARN b.i.dossier [main] FBI eMail (lperruchas@free.fr) non concordant pour BC0310674 - GREGOIRE Nathan: l.perruchas@free.fr
+2019-05-31 15:34:48,534 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310827 - DURAND Arthur
+2019-05-31 15:34:48,534 WARN b.i.dossier [main] FBI téléphones ([06.26.06.59.52]) n'a aucun numéros concordants pour BC035034 - ADAM Terry: [0626065952]
+2019-05-31 15:34:48,534 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037394 - BUCHY Antoine
+2019-05-31 15:34:48,536 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037952 - SALMON Pauline
+2019-05-31 15:34:48,537 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038536 - ROBERT Maëlle
+2019-05-31 15:34:48,537 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038544 - LUCAS Lila
+2019-05-31 15:34:48,537 WARN b.i.dossier [main] Pas de licencié trouvé pour BC042605 - FILLEAU Maxance
+2019-05-31 15:34:48,538 WARN b.i.dossier [main] Pas de licencié trouvé pour BC048596 - CHARPENTIER Maxime
+2019-05-31 15:34:48,539 WARN b.i.dossier [main] Pas de licencié trouvé pour BC052234 - RENAUDIN Marius
+2019-05-31 15:34:48,539 WARN b.i.dossier [main] Pas de licencié trouvé pour BC058359 - AIRIAU Dany
+2019-05-31 15:34:48,540 WARN b.i.dossier [main] Pas de licencié trouvé pour BC060148 - LEZIN Alice
+2019-05-31 15:34:48,541 WARN b.i.dossier [main] Pas de licencié trouvé pour BC066697 - GUERET-BILLOT Malo
+2019-05-31 15:34:48,541 WARN b.i.dossier [main] FBI téléphones ([0240736925, 0618459749]) n'a aucun numéros concordants pour BC067836 - DAVIEAU-WOLEK Maya: [0699054317, 0675707672]
+2019-05-31 15:34:48,541 WARN b.i.dossier [main] FBI eMail (florentamelie@yahoo.fr) non concordant pour BC070109 - RAULT Julien: florentamelie@outlook.fr
+2019-05-31 15:34:48,544 WARN b.i.dossier [main] FBI eMail (nicolas-bouilly@neuf.fr) non concordant pour BC090329 - BOUILLY-RIOLAND Hugo: nicolas.bouilly@neuf.fr
+2019-05-31 15:34:48,544 WARN b.i.dossier [main] FBI eMail (kgouot@netcourier.com) non concordant pour BC090836 - HUBER Timoté: kgouot@netcourrier.com
+2019-05-31 15:34:48,544 WARN b.i.dossier [main] FBI eMail (celinenoyon44@yahoo.fr) non concordant pour BC093040 - NOYON Clément: celinenoyon44@yahoo.com
+2019-05-31 15:34:48,545 WARN b.i.dossier [main] FBI téléphones ([06.25.19.17.48]) n'a aucun numéros concordants pour BC093040 - NOYON Clément: [0633301132, 0625191748]
+2019-05-31 15:34:48,545 WARN b.i.dossier [main] FBI eMail (chanelandousset@aol.fr) non concordant pour BC095557 - FONTAINE Axel: chanchandousset@aol.fr
+2019-05-31 15:34:48,545 WARN b.i.dossier [main] FBI téléphones ([0626197798]) n'a aucun numéros concordants pour BC095557 - FONTAINE Axel: [0626597798, 0648100053]
+2019-05-31 15:34:48,547 WARN b.i.dossier [main] FBI eMail (vivimimi2008@hotmail.fr) non concordant pour BC107830 - JEANVOINE Julie: vivimimi2009@hotmail.fr
+2019-05-31 15:34:48,548 WARN b.i.dossier [main] FBI eMail (guittou44@live.fr) non concordant pour BC116011 - OLIVON Noah: guitou44@live.fr
+2019-05-31 15:34:48,549 WARN b.i.dossier [main] FBI eMail (peggy-rageaud@hotmail.com) non concordant pour BC121767 - FONTENEAU Elliot: fabien.fonteneau@orange.fr ou peggy_rageaud@hotmail.com
+2019-05-31 15:34:48,549 WARN b.i.dossier [main] FBI eMail (solenallain@hotmail.com) non concordant pour BC122399 - MENAGER Charlyne: cedricmenager@outlook.fr ou soleneallain@hotmail.com
+2019-05-31 15:34:48,550 WARN b.i.dossier [main] FBI eMail (solenne.parois@hotmail.fr) non concordant pour BC123680 - KYHENG Timothée: romain.kyheng@hotmail.fr ou solene.parois@hotmail.fr
+2019-05-31 15:34:48,550 WARN b.i.dossier [main] FBI téléphones ([0967531145, 0760459734]) n'a aucun numéros concordants pour BC136337 - BASCOULERGUE Calie: [0675024488, 0760456734]
+2019-05-31 15:34:48,551 WARN b.i.dossier [main] Pas de licencié trouvé pour JE806960 - GARCIA CARBAJO Ruben
+2019-05-31 15:34:48,551 WARN b.i.dossier [main] FBI eMail (salim.adam@axa.com) non concordant pour JH762914 - ADAM Salim: salim.adam@sixt.com
+2019-05-31 15:34:48,551 WARN b.i.dossier [main] FBI téléphones ([0240658881]) n'a aucun numéros concordants pour VT470512 - BONDON Jean-Marc: [0781616367]
+2019-05-31 15:34:48,552 WARN b.i.dossier [main] FBI eMail (chantalo5@yahoo.fr) non concordant pour VT692363 - DOFONNOU Chantal: chanta605@gmail.com
+2019-05-31 15:34:48,552 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT714824 - JAUNIN Chrystèle: [0658917955]
+2019-05-31 15:34:48,552 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT732625 - JAUNIN Benoit: [0689882650]
+2019-05-31 15:34:48,553 WARN b.i.dossier [main] Pas de licencié trouvé pour VT779944 - LAPENDRY Virginie
+2019-05-31 15:34:48,553 WARN b.i.dossier [main] FBI eMail (tjoyeau@kelcom.fr) non concordant pour VT782441 - JOYEAU Tony:  tjoyeau@kelcom.fr 
+2019-05-31 15:34:48,554 WARN b.i.dossier [main] FBI téléphones ([0607749668]) n'a aucun numéros concordants pour VT792755 - TROUILLARD Fabrice: [0609952102]
+2019-05-31 15:34:48,554 WARN b.i.dossier [main] Pas de licencié trouvé pour VT795018 - VITEL Arnaud
+2019-05-31 15:34:48,554 WARN b.i.dossier [main] FBI téléphones ([0619430348]) n'a aucun numéros concordants pour VT801172 - ROLLANDO David: []
+2019-05-31 15:34:48,554 WARN b.i.dossier [main] FBI eMail (seb.gavrel@hotmail.com) non concordant pour VT801409 - GAVREL Sébastien: sebgavrel@hotmail.com
+2019-05-31 15:34:48,555 WARN b.i.dossier [main] FBI téléphones ([0650308629]) n'a aucun numéros concordants pour VT804752 - GILBERT Anthony: [0650302629]
+2019-05-31 15:34:48,555 WARN b.i.dossier [main] FBI eMail (jocloarec@hotmail.fr) non concordant pour VT843136 - CLOAREC Jonathan: jocloarec@hotmail.com
+2019-05-31 15:34:48,556 WARN b.i.dossier [main] FBI eMail (lauregervais@aol.fr) non concordant pour VT851630 - GERVAIS Laure: laure.gervais@outlook.com
+2019-05-31 15:34:48,556 WARN b.i.dossier [main] FBI téléphones ([0688850883]) n'a aucun numéros concordants pour VT860544 - GILBERT Thomas: [0688050883]
+2019-05-31 15:34:48,557 WARN b.i.dossier [main] FBI eMail (erwan.gendek@laposte.fr) non concordant pour VT920281 - GENDEK Erwan: erwan.gendek@laposte.net
+2019-05-31 15:34:48,558 WARN b.i.dossier [main] FBI téléphones ([0240046065, 0647315755]) n'a aucun numéros concordants pour VT950385 - BAUJARD Nathan: [0674866295]
+2019-05-31 15:34:48,558 WARN b.i.dossier [main] FBI téléphones ([0240658970, 06.46.50.52.72]) n'a aucun numéros concordants pour VT950743 - GROLLIER Camille: [0646505272]
+2019-05-31 15:34:48,558 WARN b.i.dossier [main] FBI eMail (nicolas.sauvage@live.fr) non concordant pour VT966544 - SAUVAGE Nicolas: nico.sauvage@live.fr
+2019-05-31 15:34:48,558 WARN b.i.dossier [main] FBI téléphones ([0615883823]) n'a aucun numéros concordants pour VT969384 - GLOTIN Mégane: [0618618536, 0638150097]
+2019-05-31 15:34:48,559 WARN b.i.dossier [main] FBI téléphones ([0240046825, 0681324011]) n'a aucun numéros concordants pour VT996587 - BEAULIEU Aléna: [0685348587]
+2019-05-31 15:34:48,559 WARN b.i.dossier [main] FBI eMail (coralydfn@yahoo.fr) non concordant pour VT996939 - DOFONNOU Coraly: chanta605@gmail.com
+2019-05-31 15:34:48,559 WARN b.i.dossier [main] FBI téléphones ([0603648466]) n'a aucun numéros concordants pour VT996939 - DOFONNOU Coraly: [0613865357, 0672813803]
+2019-05-31 15:34:48,568 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT714824 - JAUNIN Chrystèle
+2019-05-31 15:34:48,569 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT714824 - JAUNIN Chrystèle
+2019-05-31 15:34:53,506 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT714824 - JAUNIN Chrystèle
+2019-05-31 15:34:55,435 INFO b.i.dossier [main] Envoi mail pour VT714824 - JAUNIN Chrystèle: ch_jaunin@yahoo.fr
+2019-05-31 15:36:20,670 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT714824 - JAUNIN Chrystèle
+2019-05-31 15:38:05,799 WARN b.i.dossier [main] Pas de licencié trouvé pour BC000008 - BESSEMOULIN Alix
+2019-05-31 15:38:05,801 WARN b.i.dossier [main] Pas de licencié trouvé pour BC005767 - POGU-ARNAUD Kévin
+2019-05-31 15:38:05,802 WARN b.i.dossier [main] Pas de licencié trouvé pour BC006265 - BUCHY Simon
+2019-05-31 15:38:05,802 WARN b.i.dossier [main] Pas de licencié trouvé pour BC009818 - CLEMENT Augustin
+2019-05-31 15:38:05,802 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010101 - AUTRET Lucas
+2019-05-31 15:38:05,802 WARN b.i.dossier [main] FBI eMail (donnat44@orange.fr) non concordant pour BC010269 - YVETOT Stanislas: domnat44@orange.fr
+2019-05-31 15:38:05,803 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010526 - MAROUSSIE Landry
+2019-05-31 15:38:05,803 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010731 - PIPEAU Pierre
+2019-05-31 15:38:05,804 WARN b.i.dossier [main] FBI eMail (yann.legay@orange.fr) non concordant pour BC010766 - LEGUAY Clément: yann.leguay@orange.fr
+2019-05-31 15:38:05,804 WARN b.i.dossier [main] Pas de licencié trouvé pour BC015479 - LUCAS Mano
+2019-05-31 15:38:05,804 WARN b.i.dossier [main] FBI eMail (nathalie.grolier@free.fr) non concordant pour BC016446 - GROLLIER Victor: nathalie.grollier@free.fr
+2019-05-31 15:38:05,805 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017650 - JAUNATRE Maxence
+2019-05-31 15:38:05,805 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017651 - JAUNATRE Tristan
+2019-05-31 15:38:05,806 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017895 - LE MEN Killian
+2019-05-31 15:38:05,806 WARN b.i.dossier [main] Pas de licencié trouvé pour BC018382 - GLANDUS Florian
+2019-05-31 15:38:05,807 WARN b.i.dossier [main] Pas de licencié trouvé pour BC024477 - PAGNIER Juliane
+2019-05-31 15:38:05,807 WARN b.i.dossier [main] Pas de licencié trouvé pour BC025096 - TEKIN Sénem
+2019-05-31 15:38:05,808 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029901 - ALLAIRE Chloé
+2019-05-31 15:38:05,808 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029961 - PHERON Hens
+2019-05-31 15:38:05,808 WARN b.i.dossier [main] Pas de licencié trouvé pour BC030047 - SALINGUE Axelle
+2019-05-31 15:38:05,809 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310146 - BOUDET Ambre
+2019-05-31 15:38:05,809 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310239 - CLEMENT Emilien
+2019-05-31 15:38:05,810 WARN b.i.dossier [main] FBI eMail (lperruchas@free.fr) non concordant pour BC0310674 - GREGOIRE Nathan: l.perruchas@free.fr
+2019-05-31 15:38:05,810 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310827 - DURAND Arthur
+2019-05-31 15:38:05,811 WARN b.i.dossier [main] FBI téléphones ([06.26.06.59.52]) n'a aucun numéros concordants pour BC035034 - ADAM Terry: [0626065952]
+2019-05-31 15:38:05,811 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037394 - BUCHY Antoine
+2019-05-31 15:38:05,812 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037952 - SALMON Pauline
+2019-05-31 15:38:05,812 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038536 - ROBERT Maëlle
+2019-05-31 15:38:05,812 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038544 - LUCAS Lila
+2019-05-31 15:38:05,813 WARN b.i.dossier [main] Pas de licencié trouvé pour BC042605 - FILLEAU Maxance
+2019-05-31 15:38:05,814 WARN b.i.dossier [main] Pas de licencié trouvé pour BC048596 - CHARPENTIER Maxime
+2019-05-31 15:38:05,816 WARN b.i.dossier [main] Pas de licencié trouvé pour BC052234 - RENAUDIN Marius
+2019-05-31 15:38:05,817 WARN b.i.dossier [main] Pas de licencié trouvé pour BC058359 - AIRIAU Dany
+2019-05-31 15:38:05,818 WARN b.i.dossier [main] Pas de licencié trouvé pour BC060148 - LEZIN Alice
+2019-05-31 15:38:05,820 WARN b.i.dossier [main] Pas de licencié trouvé pour BC066697 - GUERET-BILLOT Malo
+2019-05-31 15:38:05,820 WARN b.i.dossier [main] FBI téléphones ([0240736925, 0618459749]) n'a aucun numéros concordants pour BC067836 - DAVIEAU-WOLEK Maya: [0699054317, 0675707672]
+2019-05-31 15:38:05,821 WARN b.i.dossier [main] FBI eMail (florentamelie@yahoo.fr) non concordant pour BC070109 - RAULT Julien: florentamelie@outlook.fr
+2019-05-31 15:38:05,825 WARN b.i.dossier [main] FBI eMail (nicolas-bouilly@neuf.fr) non concordant pour BC090329 - BOUILLY-RIOLAND Hugo: nicolas.bouilly@neuf.fr
+2019-05-31 15:38:05,825 WARN b.i.dossier [main] FBI eMail (kgouot@netcourier.com) non concordant pour BC090836 - HUBER Timoté: kgouot@netcourrier.com
+2019-05-31 15:38:05,826 WARN b.i.dossier [main] FBI eMail (celinenoyon44@yahoo.fr) non concordant pour BC093040 - NOYON Clément: celinenoyon44@yahoo.com
+2019-05-31 15:38:05,826 WARN b.i.dossier [main] FBI téléphones ([06.25.19.17.48]) n'a aucun numéros concordants pour BC093040 - NOYON Clément: [0633301132, 0625191748]
+2019-05-31 15:38:05,827 WARN b.i.dossier [main] FBI eMail (chanelandousset@aol.fr) non concordant pour BC095557 - FONTAINE Axel: chanchandousset@aol.fr
+2019-05-31 15:38:05,827 WARN b.i.dossier [main] FBI téléphones ([0626197798]) n'a aucun numéros concordants pour BC095557 - FONTAINE Axel: [0626597798, 0648100053]
+2019-05-31 15:38:05,829 WARN b.i.dossier [main] FBI eMail (vivimimi2008@hotmail.fr) non concordant pour BC107830 - JEANVOINE Julie: vivimimi2009@hotmail.fr
+2019-05-31 15:38:05,831 WARN b.i.dossier [main] FBI eMail (guittou44@live.fr) non concordant pour BC116011 - OLIVON Noah: guitou44@live.fr
+2019-05-31 15:38:05,832 WARN b.i.dossier [main] FBI eMail (peggy-rageaud@hotmail.com) non concordant pour BC121767 - FONTENEAU Elliot: fabien.fonteneau@orange.fr ou peggy_rageaud@hotmail.com
+2019-05-31 15:38:05,832 WARN b.i.dossier [main] FBI eMail (solenallain@hotmail.com) non concordant pour BC122399 - MENAGER Charlyne: cedricmenager@outlook.fr ou soleneallain@hotmail.com
+2019-05-31 15:38:05,833 WARN b.i.dossier [main] FBI eMail (solenne.parois@hotmail.fr) non concordant pour BC123680 - KYHENG Timothée: romain.kyheng@hotmail.fr ou solene.parois@hotmail.fr
+2019-05-31 15:38:05,837 WARN b.i.dossier [main] FBI téléphones ([0967531145, 0760459734]) n'a aucun numéros concordants pour BC136337 - BASCOULERGUE Calie: [0675024488, 0760456734]
+2019-05-31 15:38:05,837 WARN b.i.dossier [main] Pas de licencié trouvé pour JE806960 - GARCIA CARBAJO Ruben
+2019-05-31 15:38:05,837 WARN b.i.dossier [main] FBI eMail (salim.adam@axa.com) non concordant pour JH762914 - ADAM Salim: salim.adam@sixt.com
+2019-05-31 15:38:05,838 WARN b.i.dossier [main] FBI téléphones ([0240658881]) n'a aucun numéros concordants pour VT470512 - BONDON Jean-Marc: [0781616367]
+2019-05-31 15:38:05,839 WARN b.i.dossier [main] FBI eMail (chantalo5@yahoo.fr) non concordant pour VT692363 - DOFONNOU Chantal: chanta605@gmail.com
+2019-05-31 15:38:05,839 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT714824 - JAUNIN Chrystèle: [0658917955]
+2019-05-31 15:38:05,839 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT732625 - JAUNIN Benoit: [0689882650]
+2019-05-31 15:38:05,840 WARN b.i.dossier [main] Pas de licencié trouvé pour VT779944 - LAPENDRY Virginie
+2019-05-31 15:38:05,841 WARN b.i.dossier [main] FBI eMail (tjoyeau@kelcom.fr) non concordant pour VT782441 - JOYEAU Tony:  tjoyeau@kelcom.fr 
+2019-05-31 15:38:05,841 WARN b.i.dossier [main] FBI téléphones ([0607749668]) n'a aucun numéros concordants pour VT792755 - TROUILLARD Fabrice: [0609952102]
+2019-05-31 15:38:05,842 WARN b.i.dossier [main] Pas de licencié trouvé pour VT795018 - VITEL Arnaud
+2019-05-31 15:38:05,842 WARN b.i.dossier [main] FBI téléphones ([0619430348]) n'a aucun numéros concordants pour VT801172 - ROLLANDO David: []
+2019-05-31 15:38:05,842 WARN b.i.dossier [main] FBI eMail (seb.gavrel@hotmail.com) non concordant pour VT801409 - GAVREL Sébastien: sebgavrel@hotmail.com
+2019-05-31 15:38:05,843 WARN b.i.dossier [main] FBI téléphones ([0650308629]) n'a aucun numéros concordants pour VT804752 - GILBERT Anthony: [0650302629]
+2019-05-31 15:38:05,843 WARN b.i.dossier [main] FBI eMail (jocloarec@hotmail.fr) non concordant pour VT843136 - CLOAREC Jonathan: jocloarec@hotmail.com
+2019-05-31 15:38:05,844 WARN b.i.dossier [main] FBI eMail (lauregervais@aol.fr) non concordant pour VT851630 - GERVAIS Laure: laure.gervais@outlook.com
+2019-05-31 15:38:05,845 WARN b.i.dossier [main] FBI téléphones ([0688850883]) n'a aucun numéros concordants pour VT860544 - GILBERT Thomas: [0688050883]
+2019-05-31 15:38:05,845 WARN b.i.dossier [main] FBI eMail (erwan.gendek@laposte.fr) non concordant pour VT920281 - GENDEK Erwan: erwan.gendek@laposte.net
+2019-05-31 15:38:05,846 WARN b.i.dossier [main] FBI téléphones ([0240046065, 0647315755]) n'a aucun numéros concordants pour VT950385 - BAUJARD Nathan: [0674866295]
+2019-05-31 15:38:05,847 WARN b.i.dossier [main] FBI téléphones ([0240658970, 06.46.50.52.72]) n'a aucun numéros concordants pour VT950743 - GROLLIER Camille: [0646505272]
+2019-05-31 15:38:05,847 WARN b.i.dossier [main] FBI eMail (nicolas.sauvage@live.fr) non concordant pour VT966544 - SAUVAGE Nicolas: nico.sauvage@live.fr
+2019-05-31 15:38:05,847 WARN b.i.dossier [main] FBI téléphones ([0615883823]) n'a aucun numéros concordants pour VT969384 - GLOTIN Mégane: [0618618536, 0638150097]
+2019-05-31 15:38:05,848 WARN b.i.dossier [main] FBI téléphones ([0240046825, 0681324011]) n'a aucun numéros concordants pour VT996587 - BEAULIEU Aléna: [0685348587]
+2019-05-31 15:38:05,848 WARN b.i.dossier [main] FBI eMail (coralydfn@yahoo.fr) non concordant pour VT996939 - DOFONNOU Coraly: chanta605@gmail.com
+2019-05-31 15:38:05,849 WARN b.i.dossier [main] FBI téléphones ([0603648466]) n'a aucun numéros concordants pour VT996939 - DOFONNOU Coraly: [0613865357, 0672813803]
+2019-05-31 15:38:05,882 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:38:05,882 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT732625 - JAUNIN Benoit
+2019-05-31 15:38:11,468 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT732625 - JAUNIN Benoit
+2019-05-31 15:38:13,233 INFO b.i.dossier [main] Envoi mail pour VT732625 - JAUNIN Benoit: jauninb@yahoo.fr
+2019-05-31 15:39:40,142 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:40:19,549 WARN b.i.dossier [main] Pas de licencié trouvé pour BC000008 - BESSEMOULIN Alix
+2019-05-31 15:40:19,550 WARN b.i.dossier [main] Pas de licencié trouvé pour BC005767 - POGU-ARNAUD Kévin
+2019-05-31 15:40:19,551 WARN b.i.dossier [main] Pas de licencié trouvé pour BC006265 - BUCHY Simon
+2019-05-31 15:40:19,551 WARN b.i.dossier [main] Pas de licencié trouvé pour BC009818 - CLEMENT Augustin
+2019-05-31 15:40:19,551 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010101 - AUTRET Lucas
+2019-05-31 15:40:19,551 WARN b.i.dossier [main] FBI eMail (donnat44@orange.fr) non concordant pour BC010269 - YVETOT Stanislas: domnat44@orange.fr
+2019-05-31 15:40:19,551 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010526 - MAROUSSIE Landry
+2019-05-31 15:40:19,551 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010731 - PIPEAU Pierre
+2019-05-31 15:40:19,552 WARN b.i.dossier [main] FBI eMail (yann.legay@orange.fr) non concordant pour BC010766 - LEGUAY Clément: yann.leguay@orange.fr
+2019-05-31 15:40:19,552 WARN b.i.dossier [main] Pas de licencié trouvé pour BC015479 - LUCAS Mano
+2019-05-31 15:40:19,552 WARN b.i.dossier [main] FBI eMail (nathalie.grolier@free.fr) non concordant pour BC016446 - GROLLIER Victor: nathalie.grollier@free.fr
+2019-05-31 15:40:19,552 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017650 - JAUNATRE Maxence
+2019-05-31 15:40:19,552 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017651 - JAUNATRE Tristan
+2019-05-31 15:40:19,552 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017895 - LE MEN Killian
+2019-05-31 15:40:19,553 WARN b.i.dossier [main] Pas de licencié trouvé pour BC018382 - GLANDUS Florian
+2019-05-31 15:40:19,553 WARN b.i.dossier [main] Pas de licencié trouvé pour BC024477 - PAGNIER Juliane
+2019-05-31 15:40:19,553 WARN b.i.dossier [main] Pas de licencié trouvé pour BC025096 - TEKIN Sénem
+2019-05-31 15:40:19,554 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029901 - ALLAIRE Chloé
+2019-05-31 15:40:19,554 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029961 - PHERON Hens
+2019-05-31 15:40:19,554 WARN b.i.dossier [main] Pas de licencié trouvé pour BC030047 - SALINGUE Axelle
+2019-05-31 15:40:19,554 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310146 - BOUDET Ambre
+2019-05-31 15:40:19,554 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310239 - CLEMENT Emilien
+2019-05-31 15:40:19,554 WARN b.i.dossier [main] FBI eMail (lperruchas@free.fr) non concordant pour BC0310674 - GREGOIRE Nathan: l.perruchas@free.fr
+2019-05-31 15:40:19,555 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310827 - DURAND Arthur
+2019-05-31 15:40:19,555 WARN b.i.dossier [main] FBI téléphones ([06.26.06.59.52]) n'a aucun numéros concordants pour BC035034 - ADAM Terry: [0626065952]
+2019-05-31 15:40:19,555 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037394 - BUCHY Antoine
+2019-05-31 15:40:19,556 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037952 - SALMON Pauline
+2019-05-31 15:40:19,556 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038536 - ROBERT Maëlle
+2019-05-31 15:40:19,557 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038544 - LUCAS Lila
+2019-05-31 15:40:19,558 WARN b.i.dossier [main] Pas de licencié trouvé pour BC042605 - FILLEAU Maxance
+2019-05-31 15:40:19,559 WARN b.i.dossier [main] Pas de licencié trouvé pour BC048596 - CHARPENTIER Maxime
+2019-05-31 15:40:19,560 WARN b.i.dossier [main] Pas de licencié trouvé pour BC052234 - RENAUDIN Marius
+2019-05-31 15:40:19,560 WARN b.i.dossier [main] Pas de licencié trouvé pour BC058359 - AIRIAU Dany
+2019-05-31 15:40:19,561 WARN b.i.dossier [main] Pas de licencié trouvé pour BC060148 - LEZIN Alice
+2019-05-31 15:40:19,561 WARN b.i.dossier [main] Pas de licencié trouvé pour BC066697 - GUERET-BILLOT Malo
+2019-05-31 15:40:19,562 WARN b.i.dossier [main] FBI téléphones ([0240736925, 0618459749]) n'a aucun numéros concordants pour BC067836 - DAVIEAU-WOLEK Maya: [0699054317, 0675707672]
+2019-05-31 15:40:19,562 WARN b.i.dossier [main] FBI eMail (florentamelie@yahoo.fr) non concordant pour BC070109 - RAULT Julien: florentamelie@outlook.fr
+2019-05-31 15:40:19,564 WARN b.i.dossier [main] FBI eMail (nicolas-bouilly@neuf.fr) non concordant pour BC090329 - BOUILLY-RIOLAND Hugo: nicolas.bouilly@neuf.fr
+2019-05-31 15:40:19,564 WARN b.i.dossier [main] FBI eMail (kgouot@netcourier.com) non concordant pour BC090836 - HUBER Timoté: kgouot@netcourrier.com
+2019-05-31 15:40:19,564 WARN b.i.dossier [main] FBI eMail (celinenoyon44@yahoo.fr) non concordant pour BC093040 - NOYON Clément: celinenoyon44@yahoo.com
+2019-05-31 15:40:19,564 WARN b.i.dossier [main] FBI téléphones ([06.25.19.17.48]) n'a aucun numéros concordants pour BC093040 - NOYON Clément: [0633301132, 0625191748]
+2019-05-31 15:40:19,565 WARN b.i.dossier [main] FBI eMail (chanelandousset@aol.fr) non concordant pour BC095557 - FONTAINE Axel: chanchandousset@aol.fr
+2019-05-31 15:40:19,565 WARN b.i.dossier [main] FBI téléphones ([0626197798]) n'a aucun numéros concordants pour BC095557 - FONTAINE Axel: [0626597798, 0648100053]
+2019-05-31 15:40:19,566 WARN b.i.dossier [main] FBI eMail (vivimimi2008@hotmail.fr) non concordant pour BC107830 - JEANVOINE Julie: vivimimi2009@hotmail.fr
+2019-05-31 15:40:19,567 WARN b.i.dossier [main] FBI eMail (guittou44@live.fr) non concordant pour BC116011 - OLIVON Noah: guitou44@live.fr
+2019-05-31 15:40:19,567 WARN b.i.dossier [main] FBI eMail (peggy-rageaud@hotmail.com) non concordant pour BC121767 - FONTENEAU Elliot: fabien.fonteneau@orange.fr ou peggy_rageaud@hotmail.com
+2019-05-31 15:40:19,567 WARN b.i.dossier [main] FBI eMail (solenallain@hotmail.com) non concordant pour BC122399 - MENAGER Charlyne: cedricmenager@outlook.fr ou soleneallain@hotmail.com
+2019-05-31 15:40:19,568 WARN b.i.dossier [main] FBI eMail (solenne.parois@hotmail.fr) non concordant pour BC123680 - KYHENG Timothée: romain.kyheng@hotmail.fr ou solene.parois@hotmail.fr
+2019-05-31 15:40:19,568 WARN b.i.dossier [main] FBI téléphones ([0967531145, 0760459734]) n'a aucun numéros concordants pour BC136337 - BASCOULERGUE Calie: [0675024488, 0760456734]
+2019-05-31 15:40:19,568 WARN b.i.dossier [main] Pas de licencié trouvé pour JE806960 - GARCIA CARBAJO Ruben
+2019-05-31 15:40:19,568 WARN b.i.dossier [main] FBI eMail (salim.adam@axa.com) non concordant pour JH762914 - ADAM Salim: salim.adam@sixt.com
+2019-05-31 15:40:19,569 WARN b.i.dossier [main] FBI téléphones ([0240658881]) n'a aucun numéros concordants pour VT470512 - BONDON Jean-Marc: [0781616367]
+2019-05-31 15:40:19,569 WARN b.i.dossier [main] FBI eMail (chantalo5@yahoo.fr) non concordant pour VT692363 - DOFONNOU Chantal: chanta605@gmail.com
+2019-05-31 15:40:19,569 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT714824 - JAUNIN Chrystèle: [0658917955]
+2019-05-31 15:40:19,569 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT732625 - JAUNIN Benoit: [0689882650]
+2019-05-31 15:40:19,570 WARN b.i.dossier [main] Pas de licencié trouvé pour VT779944 - LAPENDRY Virginie
+2019-05-31 15:40:19,570 WARN b.i.dossier [main] FBI eMail (tjoyeau@kelcom.fr) non concordant pour VT782441 - JOYEAU Tony:  tjoyeau@kelcom.fr 
+2019-05-31 15:40:19,570 WARN b.i.dossier [main] FBI téléphones ([0607749668]) n'a aucun numéros concordants pour VT792755 - TROUILLARD Fabrice: [0609952102]
+2019-05-31 15:40:19,570 WARN b.i.dossier [main] Pas de licencié trouvé pour VT795018 - VITEL Arnaud
+2019-05-31 15:40:19,570 WARN b.i.dossier [main] FBI téléphones ([0619430348]) n'a aucun numéros concordants pour VT801172 - ROLLANDO David: []
+2019-05-31 15:40:19,570 WARN b.i.dossier [main] FBI eMail (seb.gavrel@hotmail.com) non concordant pour VT801409 - GAVREL Sébastien: sebgavrel@hotmail.com
+2019-05-31 15:40:19,571 WARN b.i.dossier [main] FBI téléphones ([0650308629]) n'a aucun numéros concordants pour VT804752 - GILBERT Anthony: [0650302629]
+2019-05-31 15:40:19,571 WARN b.i.dossier [main] FBI eMail (jocloarec@hotmail.fr) non concordant pour VT843136 - CLOAREC Jonathan: jocloarec@hotmail.com
+2019-05-31 15:40:19,571 WARN b.i.dossier [main] FBI eMail (lauregervais@aol.fr) non concordant pour VT851630 - GERVAIS Laure: laure.gervais@outlook.com
+2019-05-31 15:40:19,572 WARN b.i.dossier [main] FBI téléphones ([0688850883]) n'a aucun numéros concordants pour VT860544 - GILBERT Thomas: [0688050883]
+2019-05-31 15:40:19,572 WARN b.i.dossier [main] FBI eMail (erwan.gendek@laposte.fr) non concordant pour VT920281 - GENDEK Erwan: erwan.gendek@laposte.net
+2019-05-31 15:40:19,572 WARN b.i.dossier [main] FBI téléphones ([0240046065, 0647315755]) n'a aucun numéros concordants pour VT950385 - BAUJARD Nathan: [0674866295]
+2019-05-31 15:40:19,572 WARN b.i.dossier [main] FBI téléphones ([0240658970, 06.46.50.52.72]) n'a aucun numéros concordants pour VT950743 - GROLLIER Camille: [0646505272]
+2019-05-31 15:40:19,573 WARN b.i.dossier [main] FBI eMail (nicolas.sauvage@live.fr) non concordant pour VT966544 - SAUVAGE Nicolas: nico.sauvage@live.fr
+2019-05-31 15:40:19,573 WARN b.i.dossier [main] FBI téléphones ([0615883823]) n'a aucun numéros concordants pour VT969384 - GLOTIN Mégane: [0618618536, 0638150097]
+2019-05-31 15:40:19,573 WARN b.i.dossier [main] FBI téléphones ([0240046825, 0681324011]) n'a aucun numéros concordants pour VT996587 - BEAULIEU Aléna: [0685348587]
+2019-05-31 15:40:19,573 WARN b.i.dossier [main] FBI eMail (coralydfn@yahoo.fr) non concordant pour VT996939 - DOFONNOU Coraly: chanta605@gmail.com
+2019-05-31 15:40:19,573 WARN b.i.dossier [main] FBI téléphones ([0603648466]) n'a aucun numéros concordants pour VT996939 - DOFONNOU Coraly: [0613865357, 0672813803]
+2019-05-31 15:40:19,579 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:40:19,579 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT732625 - JAUNIN Benoit
+2019-05-31 15:40:23,342 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT732625 - JAUNIN Benoit
+2019-05-31 15:40:24,883 INFO b.i.dossier [main] Envoi mail pour VT732625 - JAUNIN Benoit: jauninb@yahoo.fr
+2019-05-31 15:41:45,536 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:44:41,431 WARN b.i.dossier [main] Pas de licencié trouvé pour BC000008 - BESSEMOULIN Alix
+2019-05-31 15:44:41,433 WARN b.i.dossier [main] Pas de licencié trouvé pour BC005767 - POGU-ARNAUD Kévin
+2019-05-31 15:44:41,433 WARN b.i.dossier [main] Pas de licencié trouvé pour BC006265 - BUCHY Simon
+2019-05-31 15:44:41,433 WARN b.i.dossier [main] Pas de licencié trouvé pour BC009818 - CLEMENT Augustin
+2019-05-31 15:44:41,433 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010101 - AUTRET Lucas
+2019-05-31 15:44:41,433 WARN b.i.dossier [main] FBI eMail (donnat44@orange.fr) non concordant pour BC010269 - YVETOT Stanislas: domnat44@orange.fr
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010526 - MAROUSSIE Landry
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] Pas de licencié trouvé pour BC010731 - PIPEAU Pierre
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] FBI eMail (yann.legay@orange.fr) non concordant pour BC010766 - LEGUAY Clément: yann.leguay@orange.fr
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] Pas de licencié trouvé pour BC015479 - LUCAS Mano
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] FBI eMail (nathalie.grolier@free.fr) non concordant pour BC016446 - GROLLIER Victor: nathalie.grollier@free.fr
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017650 - JAUNATRE Maxence
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017651 - JAUNATRE Tristan
+2019-05-31 15:44:41,434 WARN b.i.dossier [main] Pas de licencié trouvé pour BC017895 - LE MEN Killian
+2019-05-31 15:44:41,435 WARN b.i.dossier [main] Pas de licencié trouvé pour BC018382 - GLANDUS Florian
+2019-05-31 15:44:41,435 WARN b.i.dossier [main] Pas de licencié trouvé pour BC024477 - PAGNIER Juliane
+2019-05-31 15:44:41,435 WARN b.i.dossier [main] Pas de licencié trouvé pour BC025096 - TEKIN Sénem
+2019-05-31 15:44:41,435 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029901 - ALLAIRE Chloé
+2019-05-31 15:44:41,436 WARN b.i.dossier [main] Pas de licencié trouvé pour BC029961 - PHERON Hens
+2019-05-31 15:44:41,436 WARN b.i.dossier [main] Pas de licencié trouvé pour BC030047 - SALINGUE Axelle
+2019-05-31 15:44:41,436 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310146 - BOUDET Ambre
+2019-05-31 15:44:41,436 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310239 - CLEMENT Emilien
+2019-05-31 15:44:41,436 WARN b.i.dossier [main] FBI eMail (lperruchas@free.fr) non concordant pour BC0310674 - GREGOIRE Nathan: l.perruchas@free.fr
+2019-05-31 15:44:41,437 WARN b.i.dossier [main] Pas de licencié trouvé pour BC0310827 - DURAND Arthur
+2019-05-31 15:44:41,437 WARN b.i.dossier [main] FBI téléphones ([06.26.06.59.52]) n'a aucun numéros concordants pour BC035034 - ADAM Terry: [0626065952]
+2019-05-31 15:44:41,437 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037394 - BUCHY Antoine
+2019-05-31 15:44:41,437 WARN b.i.dossier [main] Pas de licencié trouvé pour BC037952 - SALMON Pauline
+2019-05-31 15:44:41,437 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038536 - ROBERT Maëlle
+2019-05-31 15:44:41,437 WARN b.i.dossier [main] Pas de licencié trouvé pour BC038544 - LUCAS Lila
+2019-05-31 15:44:41,438 WARN b.i.dossier [main] Pas de licencié trouvé pour BC042605 - FILLEAU Maxance
+2019-05-31 15:44:41,438 WARN b.i.dossier [main] Pas de licencié trouvé pour BC048596 - CHARPENTIER Maxime
+2019-05-31 15:44:41,439 WARN b.i.dossier [main] Pas de licencié trouvé pour BC052234 - RENAUDIN Marius
+2019-05-31 15:44:41,439 WARN b.i.dossier [main] Pas de licencié trouvé pour BC058359 - AIRIAU Dany
+2019-05-31 15:44:41,440 WARN b.i.dossier [main] Pas de licencié trouvé pour BC060148 - LEZIN Alice
+2019-05-31 15:44:41,440 WARN b.i.dossier [main] Pas de licencié trouvé pour BC066697 - GUERET-BILLOT Malo
+2019-05-31 15:44:41,441 WARN b.i.dossier [main] FBI téléphones ([0240736925, 0618459749]) n'a aucun numéros concordants pour BC067836 - DAVIEAU-WOLEK Maya: [0699054317, 0675707672]
+2019-05-31 15:44:41,441 WARN b.i.dossier [main] FBI eMail (florentamelie@yahoo.fr) non concordant pour BC070109 - RAULT Julien: florentamelie@outlook.fr
+2019-05-31 15:44:41,443 WARN b.i.dossier [main] FBI eMail (nicolas-bouilly@neuf.fr) non concordant pour BC090329 - BOUILLY-RIOLAND Hugo: nicolas.bouilly@neuf.fr
+2019-05-31 15:44:41,443 WARN b.i.dossier [main] FBI eMail (kgouot@netcourier.com) non concordant pour BC090836 - HUBER Timoté: kgouot@netcourrier.com
+2019-05-31 15:44:41,445 WARN b.i.dossier [main] FBI eMail (celinenoyon44@yahoo.fr) non concordant pour BC093040 - NOYON Clément: celinenoyon44@yahoo.com
+2019-05-31 15:44:41,445 WARN b.i.dossier [main] FBI téléphones ([06.25.19.17.48]) n'a aucun numéros concordants pour BC093040 - NOYON Clément: [0633301132, 0625191748]
+2019-05-31 15:44:41,446 WARN b.i.dossier [main] FBI eMail (chanelandousset@aol.fr) non concordant pour BC095557 - FONTAINE Axel: chanchandousset@aol.fr
+2019-05-31 15:44:41,446 WARN b.i.dossier [main] FBI téléphones ([0626197798]) n'a aucun numéros concordants pour BC095557 - FONTAINE Axel: [0626597798, 0648100053]
+2019-05-31 15:44:41,447 WARN b.i.dossier [main] FBI eMail (vivimimi2008@hotmail.fr) non concordant pour BC107830 - JEANVOINE Julie: vivimimi2009@hotmail.fr
+2019-05-31 15:44:41,448 WARN b.i.dossier [main] FBI eMail (guittou44@live.fr) non concordant pour BC116011 - OLIVON Noah: guitou44@live.fr
+2019-05-31 15:44:41,448 WARN b.i.dossier [main] FBI eMail (peggy-rageaud@hotmail.com) non concordant pour BC121767 - FONTENEAU Elliot: fabien.fonteneau@orange.fr ou peggy_rageaud@hotmail.com
+2019-05-31 15:44:41,449 WARN b.i.dossier [main] FBI eMail (solenallain@hotmail.com) non concordant pour BC122399 - MENAGER Charlyne: cedricmenager@outlook.fr ou soleneallain@hotmail.com
+2019-05-31 15:44:41,449 WARN b.i.dossier [main] FBI eMail (solenne.parois@hotmail.fr) non concordant pour BC123680 - KYHENG Timothée: romain.kyheng@hotmail.fr ou solene.parois@hotmail.fr
+2019-05-31 15:44:41,449 WARN b.i.dossier [main] FBI téléphones ([0967531145, 0760459734]) n'a aucun numéros concordants pour BC136337 - BASCOULERGUE Calie: [0675024488, 0760456734]
+2019-05-31 15:44:41,450 WARN b.i.dossier [main] Pas de licencié trouvé pour JE806960 - GARCIA CARBAJO Ruben
+2019-05-31 15:44:41,450 WARN b.i.dossier [main] FBI eMail (salim.adam@axa.com) non concordant pour JH762914 - ADAM Salim: salim.adam@sixt.com
+2019-05-31 15:44:41,450 WARN b.i.dossier [main] FBI téléphones ([0240658881]) n'a aucun numéros concordants pour VT470512 - BONDON Jean-Marc: [0781616367]
+2019-05-31 15:44:41,450 WARN b.i.dossier [main] FBI eMail (chantalo5@yahoo.fr) non concordant pour VT692363 - DOFONNOU Chantal: chanta605@gmail.com
+2019-05-31 15:44:41,451 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT714824 - JAUNIN Chrystèle: [0658917955]
+2019-05-31 15:44:41,451 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT732625 - JAUNIN Benoit: [0689882650]
+2019-05-31 15:44:41,452 WARN b.i.dossier [main] Pas de licencié trouvé pour VT779944 - LAPENDRY Virginie
+2019-05-31 15:44:41,452 WARN b.i.dossier [main] FBI téléphones ([0607749668]) n'a aucun numéros concordants pour VT792755 - TROUILLARD Fabrice: [0609952102]
+2019-05-31 15:44:41,452 WARN b.i.dossier [main] Pas de licencié trouvé pour VT795018 - VITEL Arnaud
+2019-05-31 15:44:41,452 WARN b.i.dossier [main] FBI téléphones ([0619430348]) n'a aucun numéros concordants pour VT801172 - ROLLANDO David: []
+2019-05-31 15:44:41,452 WARN b.i.dossier [main] FBI eMail (seb.gavrel@hotmail.com) non concordant pour VT801409 - GAVREL Sébastien: sebgavrel@hotmail.com
+2019-05-31 15:44:41,452 WARN b.i.dossier [main] FBI téléphones ([0650308629]) n'a aucun numéros concordants pour VT804752 - GILBERT Anthony: [0650302629]
+2019-05-31 15:44:41,453 WARN b.i.dossier [main] FBI eMail (jocloarec@hotmail.fr) non concordant pour VT843136 - CLOAREC Jonathan: jocloarec@hotmail.com
+2019-05-31 15:44:41,453 WARN b.i.dossier [main] FBI eMail (lauregervais@aol.fr) non concordant pour VT851630 - GERVAIS Laure: laure.gervais@outlook.com
+2019-05-31 15:44:41,453 WARN b.i.dossier [main] FBI téléphones ([0688850883]) n'a aucun numéros concordants pour VT860544 - GILBERT Thomas: [0688050883]
+2019-05-31 15:44:41,454 WARN b.i.dossier [main] FBI eMail (erwan.gendek@laposte.fr) non concordant pour VT920281 - GENDEK Erwan: erwan.gendek@laposte.net
+2019-05-31 15:44:41,454 WARN b.i.dossier [main] FBI téléphones ([0240046065, 0647315755]) n'a aucun numéros concordants pour VT950385 - BAUJARD Nathan: [0674866295]
+2019-05-31 15:44:41,454 WARN b.i.dossier [main] FBI téléphones ([0240658970, 06.46.50.52.72]) n'a aucun numéros concordants pour VT950743 - GROLLIER Camille: [0646505272]
+2019-05-31 15:44:41,455 WARN b.i.dossier [main] FBI eMail (nicolas.sauvage@live.fr) non concordant pour VT966544 - SAUVAGE Nicolas: nico.sauvage@live.fr
+2019-05-31 15:44:41,455 WARN b.i.dossier [main] FBI téléphones ([0615883823]) n'a aucun numéros concordants pour VT969384 - GLOTIN Mégane: [0618618536, 0638150097]
+2019-05-31 15:44:41,455 WARN b.i.dossier [main] FBI téléphones ([0240046825, 0681324011]) n'a aucun numéros concordants pour VT996587 - BEAULIEU Aléna: [0685348587]
+2019-05-31 15:44:41,455 WARN b.i.dossier [main] FBI eMail (coralydfn@yahoo.fr) non concordant pour VT996939 - DOFONNOU Coraly: chanta605@gmail.com
+2019-05-31 15:44:41,455 WARN b.i.dossier [main] FBI téléphones ([0603648466]) n'a aucun numéros concordants pour VT996939 - DOFONNOU Coraly: [0613865357, 0672813803]
+2019-05-31 15:44:41,460 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:44:41,460 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT732625 - JAUNIN Benoit
+2019-05-31 15:44:45,456 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT732625 - JAUNIN Benoit
+2019-05-31 15:44:46,472 INFO b.i.dossier [main] Envoi mail pour VT732625 - JAUNIN Benoit: jauninb@yahoo.fr
+2019-05-31 15:46:12,783 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:47:41,940 WARN b.i.dossier [main] Pas de licencié trouvé pour BC005767 - POGU-ARNAUD Kévin
+2019-05-31 15:47:41,942 WARN b.i.dossier [main] FBI eMail (donnat44@orange.fr) non concordant pour BC010269 - YVETOT Stanislas: domnat44@orange.fr
+2019-05-31 15:47:41,942 WARN b.i.dossier [main] FBI eMail (yann.legay@orange.fr) non concordant pour BC010766 - LEGUAY Clément: yann.leguay@orange.fr
+2019-05-31 15:47:41,942 WARN b.i.dossier [main] FBI eMail (nathalie.grolier@free.fr) non concordant pour BC016446 - GROLLIER Victor: nathalie.grollier@free.fr
+2019-05-31 15:47:41,944 WARN b.i.dossier [main] FBI eMail (lperruchas@free.fr) non concordant pour BC0310674 - GREGOIRE Nathan: l.perruchas@free.fr
+2019-05-31 15:47:41,945 WARN b.i.dossier [main] FBI téléphones ([06.26.06.59.52]) n'a aucun numéros concordants pour BC035034 - ADAM Terry: [0626065952]
+2019-05-31 15:47:41,950 WARN b.i.dossier [main] FBI téléphones ([0240736925, 0618459749]) n'a aucun numéros concordants pour BC067836 - DAVIEAU-WOLEK Maya: [0699054317, 0675707672]
+2019-05-31 15:47:41,950 WARN b.i.dossier [main] FBI eMail (florentamelie@yahoo.fr) non concordant pour BC070109 - RAULT Julien: florentamelie@outlook.fr
+2019-05-31 15:47:41,953 WARN b.i.dossier [main] FBI eMail (nicolas-bouilly@neuf.fr) non concordant pour BC090329 - BOUILLY-RIOLAND Hugo: nicolas.bouilly@neuf.fr
+2019-05-31 15:47:41,953 WARN b.i.dossier [main] FBI eMail (kgouot@netcourier.com) non concordant pour BC090836 - HUBER Timoté: kgouot@netcourrier.com
+2019-05-31 15:47:41,953 WARN b.i.dossier [main] FBI eMail (celinenoyon44@yahoo.fr) non concordant pour BC093040 - NOYON Clément: celinenoyon44@yahoo.com
+2019-05-31 15:47:41,953 WARN b.i.dossier [main] FBI téléphones ([06.25.19.17.48]) n'a aucun numéros concordants pour BC093040 - NOYON Clément: [0633301132, 0625191748]
+2019-05-31 15:47:41,954 WARN b.i.dossier [main] FBI eMail (chanelandousset@aol.fr) non concordant pour BC095557 - FONTAINE Axel: chanchandousset@aol.fr
+2019-05-31 15:47:41,954 WARN b.i.dossier [main] FBI téléphones ([0626197798]) n'a aucun numéros concordants pour BC095557 - FONTAINE Axel: [0626597798, 0648100053]
+2019-05-31 15:47:41,956 WARN b.i.dossier [main] FBI eMail (vivimimi2008@hotmail.fr) non concordant pour BC107830 - JEANVOINE Julie: vivimimi2009@hotmail.fr
+2019-05-31 15:47:41,957 WARN b.i.dossier [main] FBI eMail (guittou44@live.fr) non concordant pour BC116011 - OLIVON Noah: guitou44@live.fr
+2019-05-31 15:47:41,957 WARN b.i.dossier [main] FBI eMail (peggy-rageaud@hotmail.com) non concordant pour BC121767 - FONTENEAU Elliot: fabien.fonteneau@orange.fr ou peggy_rageaud@hotmail.com
+2019-05-31 15:47:41,958 WARN b.i.dossier [main] FBI eMail (solenallain@hotmail.com) non concordant pour BC122399 - MENAGER Charlyne: cedricmenager@outlook.fr ou soleneallain@hotmail.com
+2019-05-31 15:47:41,958 WARN b.i.dossier [main] FBI eMail (solenne.parois@hotmail.fr) non concordant pour BC123680 - KYHENG Timothée: romain.kyheng@hotmail.fr ou solene.parois@hotmail.fr
+2019-05-31 15:47:41,959 WARN b.i.dossier [main] FBI téléphones ([0967531145, 0760459734]) n'a aucun numéros concordants pour BC136337 - BASCOULERGUE Calie: [0675024488, 0760456734]
+2019-05-31 15:47:41,959 WARN b.i.dossier [main] Pas de licencié trouvé pour JE806960 - GARCIA CARBAJO Ruben
+2019-05-31 15:47:41,959 WARN b.i.dossier [main] FBI eMail (salim.adam@axa.com) non concordant pour JH762914 - ADAM Salim: salim.adam@sixt.com
+2019-05-31 15:47:41,960 WARN b.i.dossier [main] FBI téléphones ([0240658881]) n'a aucun numéros concordants pour VT470512 - BONDON Jean-Marc: [0781616367]
+2019-05-31 15:47:41,960 WARN b.i.dossier [main] FBI eMail (chantalo5@yahoo.fr) non concordant pour VT692363 - DOFONNOU Chantal: chanta605@gmail.com
+2019-05-31 15:47:41,961 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT714824 - JAUNIN Chrystèle: [0658917955]
+2019-05-31 15:47:41,961 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT732625 - JAUNIN Benoit: [0689882650]
+2019-05-31 15:47:41,961 WARN b.i.dossier [main] Pas de licencié trouvé pour VT779944 - LAPENDRY Virginie
+2019-05-31 15:47:41,962 WARN b.i.dossier [main] FBI téléphones ([0607749668]) n'a aucun numéros concordants pour VT792755 - TROUILLARD Fabrice: [0609952102]
+2019-05-31 15:47:41,962 WARN b.i.dossier [main] Pas de licencié trouvé pour VT795018 - VITEL Arnaud
+2019-05-31 15:47:41,962 WARN b.i.dossier [main] FBI téléphones ([0619430348]) n'a aucun numéros concordants pour VT801172 - ROLLANDO David: []
+2019-05-31 15:47:41,962 WARN b.i.dossier [main] FBI eMail (seb.gavrel@hotmail.com) non concordant pour VT801409 - GAVREL Sébastien: sebgavrel@hotmail.com
+2019-05-31 15:47:41,963 WARN b.i.dossier [main] FBI téléphones ([0650308629]) n'a aucun numéros concordants pour VT804752 - GILBERT Anthony: [0650302629]
+2019-05-31 15:47:41,963 WARN b.i.dossier [main] FBI eMail (jocloarec@hotmail.fr) non concordant pour VT843136 - CLOAREC Jonathan: jocloarec@hotmail.com
+2019-05-31 15:47:41,964 WARN b.i.dossier [main] FBI eMail (lauregervais@aol.fr) non concordant pour VT851630 - GERVAIS Laure: laure.gervais@outlook.com
+2019-05-31 15:47:41,964 WARN b.i.dossier [main] FBI téléphones ([0688850883]) n'a aucun numéros concordants pour VT860544 - GILBERT Thomas: [0688050883]
+2019-05-31 15:47:41,964 WARN b.i.dossier [main] FBI eMail (erwan.gendek@laposte.fr) non concordant pour VT920281 - GENDEK Erwan: erwan.gendek@laposte.net
+2019-05-31 15:47:41,965 WARN b.i.dossier [main] FBI téléphones ([0240046065, 0647315755]) n'a aucun numéros concordants pour VT950385 - BAUJARD Nathan: [0674866295]
+2019-05-31 15:47:41,965 WARN b.i.dossier [main] FBI téléphones ([0240658970, 06.46.50.52.72]) n'a aucun numéros concordants pour VT950743 - GROLLIER Camille: [0646505272]
+2019-05-31 15:47:41,966 WARN b.i.dossier [main] FBI eMail (nicolas.sauvage@live.fr) non concordant pour VT966544 - SAUVAGE Nicolas: nico.sauvage@live.fr
+2019-05-31 15:47:41,966 WARN b.i.dossier [main] FBI téléphones ([0615883823]) n'a aucun numéros concordants pour VT969384 - GLOTIN Mégane: [0618618536, 0638150097]
+2019-05-31 15:47:41,966 WARN b.i.dossier [main] FBI téléphones ([0240046825, 0681324011]) n'a aucun numéros concordants pour VT996587 - BEAULIEU Aléna: [0685348587]
+2019-05-31 15:47:41,967 WARN b.i.dossier [main] FBI eMail (coralydfn@yahoo.fr) non concordant pour VT996939 - DOFONNOU Coraly: chanta605@gmail.com
+2019-05-31 15:47:41,967 WARN b.i.dossier [main] FBI téléphones ([0603648466]) n'a aucun numéros concordants pour VT996939 - DOFONNOU Coraly: [0613865357, 0672813803]
+2019-05-31 15:47:41,972 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:47:41,973 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT732625 - JAUNIN Benoit
+2019-05-31 15:47:45,720 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT732625 - JAUNIN Benoit
+2019-05-31 15:47:46,715 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:53:16,975 WARN b.i.dossier [main] FBI eMail (donnat44@orange.fr) non concordant pour BC010269 - YVETOT Stanislas: domnat44@orange.fr
+2019-05-31 15:53:16,977 WARN b.i.dossier [main] FBI eMail (yann.legay@orange.fr) non concordant pour BC010766 - LEGUAY Clément: yann.leguay@orange.fr
+2019-05-31 15:53:16,978 WARN b.i.dossier [main] FBI eMail (nathalie.grolier@free.fr) non concordant pour BC016446 - GROLLIER Victor: nathalie.grollier@free.fr
+2019-05-31 15:53:16,979 WARN b.i.dossier [main] FBI eMail (lperruchas@free.fr) non concordant pour BC0310674 - GREGOIRE Nathan: l.perruchas@free.fr
+2019-05-31 15:53:16,980 WARN b.i.dossier [main] FBI téléphones ([06.26.06.59.52]) n'a aucun numéros concordants pour BC035034 - ADAM Terry: [0626065952]
+2019-05-31 15:53:16,983 WARN b.i.dossier [main] FBI téléphones ([0240736925, 0618459749]) n'a aucun numéros concordants pour BC067836 - DAVIEAU-WOLEK Maya: [0699054317, 0675707672]
+2019-05-31 15:53:16,984 WARN b.i.dossier [main] FBI eMail (florentamelie@yahoo.fr) non concordant pour BC070109 - RAULT Julien: florentamelie@outlook.fr
+2019-05-31 15:53:16,988 WARN b.i.dossier [main] FBI eMail (nicolas-bouilly@neuf.fr) non concordant pour BC090329 - BOUILLY-RIOLAND Hugo: nicolas.bouilly@neuf.fr
+2019-05-31 15:53:16,988 WARN b.i.dossier [main] FBI eMail (kgouot@netcourier.com) non concordant pour BC090836 - HUBER Timoté: kgouot@netcourrier.com
+2019-05-31 15:53:16,989 WARN b.i.dossier [main] FBI eMail (celinenoyon44@yahoo.fr) non concordant pour BC093040 - NOYON Clément: celinenoyon44@yahoo.com
+2019-05-31 15:53:16,989 WARN b.i.dossier [main] FBI téléphones ([06.25.19.17.48]) n'a aucun numéros concordants pour BC093040 - NOYON Clément: [0633301132, 0625191748]
+2019-05-31 15:53:16,989 WARN b.i.dossier [main] FBI eMail (chanelandousset@aol.fr) non concordant pour BC095557 - FONTAINE Axel: chanchandousset@aol.fr
+2019-05-31 15:53:16,990 WARN b.i.dossier [main] FBI téléphones ([0626197798]) n'a aucun numéros concordants pour BC095557 - FONTAINE Axel: [0626597798, 0648100053]
+2019-05-31 15:53:16,991 WARN b.i.dossier [main] FBI eMail (vivimimi2008@hotmail.fr) non concordant pour BC107830 - JEANVOINE Julie: vivimimi2009@hotmail.fr
+2019-05-31 15:53:16,992 WARN b.i.dossier [main] FBI eMail (guittou44@live.fr) non concordant pour BC116011 - OLIVON Noah: guitou44@live.fr
+2019-05-31 15:53:16,993 WARN b.i.dossier [main] FBI eMail (peggy-rageaud@hotmail.com) non concordant pour BC121767 - FONTENEAU Elliot: fabien.fonteneau@orange.fr ou peggy_rageaud@hotmail.com
+2019-05-31 15:53:16,993 WARN b.i.dossier [main] FBI eMail (solenallain@hotmail.com) non concordant pour BC122399 - MENAGER Charlyne: cedricmenager@outlook.fr ou soleneallain@hotmail.com
+2019-05-31 15:53:16,993 WARN b.i.dossier [main] FBI eMail (solenne.parois@hotmail.fr) non concordant pour BC123680 - KYHENG Timothée: romain.kyheng@hotmail.fr ou solene.parois@hotmail.fr
+2019-05-31 15:53:16,994 WARN b.i.dossier [main] FBI téléphones ([0967531145, 0760459734]) n'a aucun numéros concordants pour BC136337 - BASCOULERGUE Calie: [0675024488, 0760456734]
+2019-05-31 15:53:16,994 WARN b.i.dossier [main] FBI eMail (salim.adam@axa.com) non concordant pour JH762914 - ADAM Salim: salim.adam@sixt.com
+2019-05-31 15:53:16,995 WARN b.i.dossier [main] FBI téléphones ([0240658881]) n'a aucun numéros concordants pour VT470512 - BONDON Jean-Marc: [0781616367]
+2019-05-31 15:53:16,995 WARN b.i.dossier [main] FBI eMail (chantalo5@yahoo.fr) non concordant pour VT692363 - DOFONNOU Chantal: chanta605@gmail.com
+2019-05-31 15:53:16,995 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT714824 - JAUNIN Chrystèle: [0658917955]
+2019-05-31 15:53:16,996 WARN b.i.dossier [main] FBI téléphones ([0240056729]) n'a aucun numéros concordants pour VT732625 - JAUNIN Benoit: [0689882650]
+2019-05-31 15:53:16,996 WARN b.i.dossier [main] Pas de licencié trouvé pour VT779944 - LAPENDRY Virginie
+2019-05-31 15:53:16,997 WARN b.i.dossier [main] FBI téléphones ([0607749668]) n'a aucun numéros concordants pour VT792755 - TROUILLARD Fabrice: [0609952102]
+2019-05-31 15:53:16,997 WARN b.i.dossier [main] FBI eMail (fd@orange.fr) non concordant pour VT795013 - VITEL Arnaud: arnaud.vitel44@orange.fr
+2019-05-31 15:53:16,997 WARN b.i.dossier [main] FBI téléphones ([0619430348]) n'a aucun numéros concordants pour VT801172 - ROLLANDO David: []
+2019-05-31 15:53:16,997 WARN b.i.dossier [main] FBI eMail (seb.gavrel@hotmail.com) non concordant pour VT801409 - GAVREL Sébastien: sebgavrel@hotmail.com
+2019-05-31 15:53:16,998 WARN b.i.dossier [main] FBI téléphones ([0650308629]) n'a aucun numéros concordants pour VT804752 - GILBERT Anthony: [0650302629]
+2019-05-31 15:53:16,998 WARN b.i.dossier [main] FBI eMail (jocloarec@hotmail.fr) non concordant pour VT843136 - CLOAREC Jonathan: jocloarec@hotmail.com
+2019-05-31 15:53:16,999 WARN b.i.dossier [main] FBI eMail (lauregervais@aol.fr) non concordant pour VT851630 - GERVAIS Laure: laure.gervais@outlook.com
+2019-05-31 15:53:16,999 WARN b.i.dossier [main] FBI téléphones ([0688850883]) n'a aucun numéros concordants pour VT860544 - GILBERT Thomas: [0688050883]
+2019-05-31 15:53:16,999 WARN b.i.dossier [main] FBI eMail (erwan.gendek@laposte.fr) non concordant pour VT920281 - GENDEK Erwan: erwan.gendek@laposte.net
+2019-05-31 15:53:17,000 WARN b.i.dossier [main] FBI téléphones ([0240046065, 0647315755]) n'a aucun numéros concordants pour VT950385 - BAUJARD Nathan: [0674866295]
+2019-05-31 15:53:17,000 WARN b.i.dossier [main] FBI téléphones ([0240658970, 06.46.50.52.72]) n'a aucun numéros concordants pour VT950743 - GROLLIER Camille: [0646505272]
+2019-05-31 15:53:17,001 WARN b.i.dossier [main] FBI eMail (nicolas.sauvage@live.fr) non concordant pour VT966544 - SAUVAGE Nicolas: nico.sauvage@live.fr
+2019-05-31 15:53:17,001 WARN b.i.dossier [main] FBI téléphones ([0615883823]) n'a aucun numéros concordants pour VT969384 - GLOTIN Mégane: [0618618536, 0638150097]
+2019-05-31 15:53:17,001 WARN b.i.dossier [main] FBI téléphones ([0240046825, 0681324011]) n'a aucun numéros concordants pour VT996587 - BEAULIEU Aléna: [0685348587]
+2019-05-31 15:53:17,001 WARN b.i.dossier [main] FBI eMail (coralydfn@yahoo.fr) non concordant pour VT996939 - DOFONNOU Coraly: chanta605@gmail.com
+2019-05-31 15:53:17,002 WARN b.i.dossier [main] FBI téléphones ([0603648466]) n'a aucun numéros concordants pour VT996939 - DOFONNOU Coraly: [0613865357, 0672813803]
+2019-05-31 15:53:17,021 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT732625 - JAUNIN Benoit
+2019-05-31 15:53:17,021 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT732625 - JAUNIN Benoit
+2019-05-31 15:53:22,252 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT732625 - JAUNIN Benoit
+2019-05-31 15:53:24,214 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT732625 - JAUNIN Benoit

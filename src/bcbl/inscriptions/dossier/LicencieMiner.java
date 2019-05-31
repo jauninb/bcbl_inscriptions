@@ -25,7 +25,7 @@ public class LicencieMiner {
 	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('W');
 	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('Y');
 	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('Z');
-	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('M');
+	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('N');
 
 	private static int FBI_STARTING_ROW = 11;
 	private static int FBI_NOM_CELL_INDEX = indexOfColumn('F');
@@ -124,22 +124,22 @@ public class LicencieMiner {
 						continue;
 					}
 					Licencie licencie = new Licencie();
-					licencie.nom = cellNom.getStringCellValue();
-					licencie.prenom = row.getCell(BCBL_PRENOM_CELL_INDEX).getStringCellValue();
+					licencie.nom = cellNom.getStringCellValue().trim();
+					licencie.prenom = row.getCell(BCBL_PRENOM_CELL_INDEX).getStringCellValue().trim();
 					licencie.categorie = row.getCell(BCBL_CATEGORIE_CELL_INDEX).getStringCellValue();
-					licencie.email1 = row.getCell(BCBL_EMAIL1_CELL_INDEX).getStringCellValue();
-					licencie.email2 = row.getCell(BCBL_EMAIL2_CELL_INDEX).getStringCellValue();
+					licencie.email1 = row.getCell(BCBL_EMAIL1_CELL_INDEX).getStringCellValue().trim();
+					licencie.email2 = row.getCell(BCBL_EMAIL2_CELL_INDEX).getStringCellValue().trim();
 					try {
 						licencie.naissance = row.getCell(BCBL_NAISSANCE_CELL_INDEX).getDateCellValue();
 					} catch (Exception e) {
 						licencie.naissance = new Date();
 					}
 					licencie.licence = row.getCell(BCBL_LICENCE_CELL_INDEX).getStringCellValue().trim();
-					licencie.telephone1 = row.getCell(BCBL_TELEPHONE1_CELL_INDEX).getStringCellValue();
-					licencie.telephone2 = row.getCell(BCBL_TELEPHONE2_CELL_INDEX).getStringCellValue();
+					licencie.telephone1 = row.getCell(BCBL_TELEPHONE1_CELL_INDEX).getStringCellValue().trim();
+					licencie.telephone2 = row.getCell(BCBL_TELEPHONE2_CELL_INDEX).getStringCellValue().trim();
 					licencie.taille = row.getCell(BCBL_TAILLE_CELL_INDEX).getNumericCellValue();
-					licencie.ville = row.getCell(BCBL_VILLE_CELL_INDEX).getStringCellValue();
-					licencie.sexe = row.getCell(BCBL_SEXE_CELL_INDEX).getStringCellValue();
+					licencie.ville = row.getCell(BCBL_VILLE_CELL_INDEX).getStringCellValue().trim();
+					licencie.sexe = row.getCell(BCBL_SEXE_CELL_INDEX).getStringCellValue().trim();
 					licencies.add(licencie);
 				}
 			}
