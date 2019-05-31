@@ -273,11 +273,33 @@ public class FillerFFBB {
 				dopageJoueur.setValue(bcblNomPrenom);
 			} else {
 				// Nom pour assurance
-				PDTextField nomAssure = (PDTextField) acroForm.getField("JE SOUSSIGNÉE le licencié ou son représentant légal NOM");
+				PDTextField nomAssure = (PDTextField) acroForm
+						.getField("JE SOUSSIGNÉE le licencié ou son représentant légal NOM");
 				nomAssure.setValue(bcbl.nom);
 				// Prenom assurance
 				PDTextField prenomAssure = (PDTextField) acroForm.getField("PRÉNOM");
 				prenomAssure.setValue(bcbl.prenom);
+			}
+
+			// Choix de l'assurance
+			if ("N".equalsIgnoreCase(fbi.assurance)) {
+				// Pas d'assurance la saison dernière
+				PDCheckBox assuranceN = (PDCheckBox) acroForm.getField("Check Box28");
+				assuranceN.check();
+			} else {
+				// Assurance la saison dernière
+				PDCheckBox assurance = (PDCheckBox) acroForm.getField("Check Box26");
+				assurance.check();
+				String fullyQualifiedNameForAssurance = "Check Box27";
+				if ("B".equalsIgnoreCase(fbi.assurance)) {
+					fullyQualifiedNameForAssurance = "B";
+				} else if ("A+".equalsIgnoreCase(fbi.assurance)) {
+					fullyQualifiedNameForAssurance = "C";
+				} else if ("B+".equalsIgnoreCase(fbi.assurance)) {
+					fullyQualifiedNameForAssurance = "D";
+				}
+				PDCheckBox assuranceOption = (PDCheckBox) acroForm.getField(fullyQualifiedNameForAssurance);
+				assuranceOption.check();
 			}
 
 		}

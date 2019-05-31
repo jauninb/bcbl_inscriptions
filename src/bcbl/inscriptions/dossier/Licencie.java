@@ -19,6 +19,7 @@ public class Licencie {
 	public String ville;
 	public String categorie;
 	public Date certificat_medical;
+	public String assurance;
 
 	@Override
 	public String toString() {

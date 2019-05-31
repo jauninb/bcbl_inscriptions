@@ -43,6 +43,7 @@ public class LicencieMiner {
 	private static int FBI_SEXE_CELL_INDEX = indexOfColumn('O');
 	private static int FBI_NAISSANCE_CELL_INDEX = indexOfColumn('S');
 	private static int FBI_CERTIFICAT_MEDICAL_CELL_INDEX = indexOfColumn('V');
+	private static int FBI_ASSURANCE_INDEX = indexOfColumn('R');
 
 	private static int indexOfColumn(char column) {
 		return column - 'A';
@@ -110,6 +111,7 @@ public class LicencieMiner {
 					if (row.getCell(FBI_CERTIFICAT_MEDICAL_CELL_INDEX).getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
 						licencie.certificat_medical = row.getCell(FBI_CERTIFICAT_MEDICAL_CELL_INDEX).getDateCellValue();
 					}
+					licencie.assurance = row.getCell(FBI_ASSURANCE_INDEX).getStringCellValue();
 					licencies.add(licencie);
 				} else {
 					Cell cellNom = row.getCell(BCBL_NOM_CELL_INDEX);
