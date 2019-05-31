@@ -202,7 +202,7 @@ public class Main {
 
 				logger.info((i + 1) + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
 						+ bcbl.prenom);
-				File[] attachments = new File[4];
+				File[] attachments = new File[6];
 				logger.info("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[0] = fillerBCBL.generate(fbi, bcbl);
 				
@@ -217,6 +217,10 @@ public class Main {
 				attachments[2] = new File(FillerFFBB.FFBB_QUESTIONNAIRE_SANTE_PATH);
 				
 				attachments[3] = new File(FillerFFBB.FFBB_NOTICE_ASSURANCE_PATH);
+				
+				attachments[4] = new File("./data/Ligne_Club_20190325.jpg");
+
+				attachments[5] = new File("./data/Sweat_20190325.jpg");
 
 				if (!noMail) {
 					if ((bcbl.email1 != null && bcbl.email1.trim().length()==0) && (bcbl.email1 != null && bcbl.email1.trim().length()==0)) {
