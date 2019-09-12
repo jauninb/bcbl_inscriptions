@@ -1,7 +1,0 @@
-2017-06-09 14:45:12,590 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT829561 - SAVARIEAU Céline
-2017-06-09 14:45:12,592 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT829561 - SAVARIEAU Céline
-2017-06-09 14:45:12,605 ERROR b.i.dossier [main] java.io.FileNotFoundException: C:\usr\Personnel\basket\equipes\saison 2017_2018\2017-2018 Inscription (Renouvellement).docx (The system cannot find the file specified.)
-2017-06-09 14:45:57,034 INFO b.i.dossier [main] 1 - Debut Traitement Licencié: VT829561 - SAVARIEAU Céline
-2017-06-09 14:45:57,036 INFO b.i.dossier [main] Genération Imprimé BCBL pour VT829561 - SAVARIEAU Céline
-2017-06-09 14:45:59,461 INFO b.i.dossier [main] Genération Imprimé FFBB pour VT829561 - SAVARIEAU Céline
-2017-06-09 14:46:00,683 INFO b.i.dossier [main] 1 - Fin Traitement Licencié: VT829561 - SAVARIEAU Céline
