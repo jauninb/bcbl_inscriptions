@@ -22,6 +22,8 @@ public class FillerFFBB {
 
 	public static String FFBB_NOTICE_ASSURANCE_PATH = "./data/FFBB Notice Information Assurances.pdf";
 
+	public static String FFBB_CERTIFICAT_MEDICAL_PATH = "./data/certificat_medical.pdf";
+	
 	private static Calendar now = Calendar.getInstance();
 	static {
 		now.setTime(new Date());

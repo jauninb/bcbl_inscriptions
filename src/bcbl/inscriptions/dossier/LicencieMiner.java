@@ -30,19 +30,19 @@ public class LicencieMiner {
 	private static int FBI_STARTING_ROW = 11;
 	private static int FBI_NOM_CELL_INDEX = indexOfColumn('F');
 	private static int FBI_PRENOM_CELL_INDEX = indexOfColumn('H');
-	private static int FBI_LICENCE_CELL_INDEX = indexOfColumn('U');
+	private static int FBI_LICENCE_CELL_INDEX = indexOfColumn('V');
 	private static int FBI_TELEPHONE_CELL_INDEX = indexOfColumn('Y');
 	private static int FBI_PORTABLE1_CELL_INDEX = indexOfColumn('Z');
-	private static int FBI_PORTABLE2_CELL_INDEX = indexOfColumn("AA");
-	private static int FBI_EMAIL1_CELL_INDEX = indexOfColumn("AB");
-	private static int FBI_EMAIL2_CELL_INDEX = indexOfColumn("AB");
+	private static int FBI_PORTABLE2_CELL_INDEX = indexOfColumn("AB");
+	private static int FBI_EMAIL1_CELL_INDEX = indexOfColumn("AC");
+	private static int FBI_EMAIL2_CELL_INDEX = indexOfColumn("AC");
 	private static int FBI_TAILLE_CELL_INDEX = indexOfColumn('P');
 	private static int FBI_ADRESSE_CELL_INDEX = indexOfColumn('I');
 	private static int FBI_CP_CELL_INDEX = indexOfColumn('J');
 	private static int FBI_VILLE_CELL_INDEX = indexOfColumn('K');
 	private static int FBI_SEXE_CELL_INDEX = indexOfColumn('O');
 	private static int FBI_NAISSANCE_CELL_INDEX = indexOfColumn('S');
-	private static int FBI_CERTIFICAT_MEDICAL_CELL_INDEX = indexOfColumn('V');
+	private static int FBI_CERTIFICAT_MEDICAL_CELL_INDEX = indexOfColumn('W');
 	private static int FBI_ASSURANCE_INDEX = indexOfColumn('R');
 
 	private static int indexOfColumn(char column) {

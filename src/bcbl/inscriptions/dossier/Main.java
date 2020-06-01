@@ -202,10 +202,13 @@ public class Main {
 
 				logger.info((i + 1) + " - Debut Traitement Licencié: " + bcbl.licence + " - " + bcbl.nom + " "
 						+ bcbl.prenom);
-				File[] attachments = new File[6];
+				File[] attachments = new File[2];
 				logger.info("Genération Imprimé BCBL pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 				attachments[0] = fillerBCBL.generate(fbi, bcbl);
-				
+
+				attachments[1] = new File(FillerFFBB.FFBB_CERTIFICAT_MEDICAL_PATH);
+
+				/*
 				if (fbi != null) {
 					logger.info("Genération Imprimé FFBB pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom);
 					attachments[1] = fillerFFBB.generate(fbi, bcbl);
@@ -221,7 +224,8 @@ public class Main {
 				attachments[4] = new File("./data/Ligne_Club_20190325.jpg");
 
 				attachments[5] = new File("./data/Sweat_20190325.jpg");
-
+				*/
+				
 				if (!noMail) {
 					if ((bcbl.email1 != null && bcbl.email1.trim().length()==0) && (bcbl.email1 != null && bcbl.email1.trim().length()==0)) {
 						logger.warn("Pas d'email pour " + bcbl.licence + " - " + bcbl.nom + " " + bcbl.prenom + " - envoi manuel à faire");
