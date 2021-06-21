@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/bcbl_inscriptions/src/bcbl/inscriptions/dossier/Main.java"/>
-</listAttribute>
-<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-<listEntry value="1"/>
-</listAttribute>
-<mapAttribute key="org.eclipse.debug.core.environmentVariables">
-<mapEntry key="Path" value="${workspace_loc:/bcbl_inscriptions/lib}"/>
-</mapAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bcbl.inscriptions.dossier.Main"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-licenciesBCBL &quot;C:\usr\Personnel\basket\equipes\saison 2020_2021\2020-2021 Listing Licencies.xls&quot; -licenciesFBI &quot;C:\usr\Personnel\basket\equipes\saison 2019_2020\M01_qualifies_complet_L_E_P_V.xls&quot; -licenceX BC035034 -licencebjn VT732625 -licencecjn VT714824 -noCheck -output test -noMailX -beginX 1 -endX 3 -delay 20"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="bcbl_inscriptions"/>
-<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dlog4j.configurationFile=${workspace_loc:/bcbl_inscriptions/log4j2.xml}"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/bcbl_inscriptions/src/bcbl/inscriptions/dossier/Main.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="Path" value="${workspace_loc:/bcbl_inscriptions/lib}"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="bcbl.inscriptions.dossier.Main"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="bcbl_inscriptions"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-licenciesBCBL &quot;C:\Benoit\basket\equipes\saison 2021_2022\2021-2022 Listing Licencies.xls&quot; -licenciesFBI &quot;C:\Benoit\basket\equipes\saison 2021_2022\M01_licence_complet_mulitsaison.xls&quot; -licenceX BC035034 -licencebjn VT732625 -licencecjn VT714824 -licencenancy VT705653 -licence VT661536 -noCheckX -output test -noMailX -beginX 1 -endX 3 -delay 20"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="bcbl_inscriptions"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dlog4j.configurationFile=${workspace_loc:/bcbl_inscriptions/log4j2.xml}"/>
 </launchConfiguration>

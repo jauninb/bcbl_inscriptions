@@ -38,6 +38,7 @@ public class EmailEmitter {
 		properties.put("mail.smtp.port", port);
 		properties.put("mail.smtp.auth", "true");
 		properties.put("mail.smtp.starttls.enable", "true");
+		properties.put("mail.smtp.ssl.trust", host);		
 
 		// creates a new session with an authenticator
 		Authenticator auth = new Authenticator() {

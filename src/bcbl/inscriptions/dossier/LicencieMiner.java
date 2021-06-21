@@ -13,19 +13,19 @@ public class LicencieMiner {
 	private boolean fromFBI;
 
 	private static int BCBL_STARTING_ROW = 1;
-	private static int BCBL_NOM_CELL_INDEX = indexOfColumn('F');
-	private static int BCBL_PRENOM_CELL_INDEX = indexOfColumn('G');
+	private static int BCBL_NOM_CELL_INDEX = indexOfColumn('G');
+	private static int BCBL_PRENOM_CELL_INDEX = indexOfColumn('H');
 	private static int BCBL_CATEGORIE_CELL_INDEX = indexOfColumn('I');
-	private static int BCBL_LICENCE_CELL_INDEX = indexOfColumn('P');
-	private static int BCBL_TELEPHONE1_CELL_INDEX = indexOfColumn('Q');
-	private static int BCBL_TELEPHONE2_CELL_INDEX = indexOfColumn('R');
-	private static int BCBL_EMAIL1_CELL_INDEX = indexOfColumn('S');
-	private static int BCBL_EMAIL2_CELL_INDEX = indexOfColumn('T');
-	private static int BCBL_TAILLE_CELL_INDEX = indexOfColumn('U');
-	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('W');
-	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('Y');
-	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('Z');
-	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('N');
+	private static int BCBL_LICENCE_CELL_INDEX = indexOfColumn('M');
+	private static int BCBL_TELEPHONE1_CELL_INDEX = indexOfColumn('N');
+	private static int BCBL_TELEPHONE2_CELL_INDEX = indexOfColumn('O');
+	private static int BCBL_EMAIL1_CELL_INDEX = indexOfColumn('P');
+	private static int BCBL_EMAIL2_CELL_INDEX = indexOfColumn('Q');
+	//private static int BCBL_TAILLE_CELL_INDEX = indexOfColumn('U');
+	private static int BCBL_VILLE_CELL_INDEX = indexOfColumn('U');
+	private static int BCBL_SEXE_CELL_INDEX = indexOfColumn('W');
+	private static int BCBL_NAISSANCE_CELL_INDEX = indexOfColumn('X');
+	private static int BCBL_TYPE_CELL_INDEX = indexOfColumn('T');
 
 	private static int FBI_STARTING_ROW = 11;
 	private static int FBI_NOM_CELL_INDEX = indexOfColumn('F');
@@ -137,7 +137,7 @@ public class LicencieMiner {
 					licencie.licence = row.getCell(BCBL_LICENCE_CELL_INDEX).getStringCellValue().trim();
 					licencie.telephone1 = row.getCell(BCBL_TELEPHONE1_CELL_INDEX).getStringCellValue().trim();
 					licencie.telephone2 = row.getCell(BCBL_TELEPHONE2_CELL_INDEX).getStringCellValue().trim();
-					licencie.taille = row.getCell(BCBL_TAILLE_CELL_INDEX).getNumericCellValue();
+					licencie.taille = 0; //row.getCell(BCBL_TAILLE_CELL_INDEX).getNumericCellValue();
 					licencie.ville = row.getCell(BCBL_VILLE_CELL_INDEX).getStringCellValue().trim();
 					licencie.sexe = row.getCell(BCBL_SEXE_CELL_INDEX).getStringCellValue().trim();
 					licencies.add(licencie);
